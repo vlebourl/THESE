@@ -1,0 +1,337 @@
+\documentclass[12pt,a4paper,twoside,openright,final]{memoir}
+%draft / ms / final
+%\usepackage[adobe-utopia]{mathdesign}
+%\usepackage{kpfonts}
+%\usepackage{mathptmx}
+%\usepackage{fourier}
+\usepackage[frenchb,english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lettrine}
+\usepackage{yfonts}
+\newcommand{\enluminure}[2]{\lettrine[lines=2]{\small \initfamily #1}{#2}}
+
+\usepackage[babel=true,kerning=true]{microtype}
+\usepackage{lipsum}
+\usepackage[intlimits]{amsmath}
+\usepackage{mathtools}
+
+\usepackage[pdftex]{graphicx}
+\newlength{\lofthumbsize}
+\setlength{\lofthumbsize}{5em}
+
+\newif\iflofimage
+\DeclareRobustCommand*{\lofimage}[2][]{%
+  \iflofimage
+    $\vcenter to \lofthumbsize{\vss%
+      \hbox to \lofthumbsize{\hss\includegraphics[{width=\lofthumbsize,height=\lofthumbsize,keepaspectratio=true,#1}]{#2}\hss}%
+    \vss}$%
+    \quad
+  \fi
+  \ignorespaces
+}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\usepackage{float}
+
+\usepackage{fancybox}
+\newenvironment{fminipage}%
+{\begin{Sbox}\begin{minipage}}%
+{\end{minipage}\end{Sbox}\fbox{\TheSbox}}
+
+\newlength\drop
+
+%% environnement infobox
+\usepackage{etoolbox}
+\newcounter{infobox}[section]
+\renewcommand{\theinfobox}{\thechapter.\arabic{infobox}}
+\usepackage[framemethod=TikZ]{mdframed}
+\newenvironment{infobox}[1][]{%
+    \refstepcounter{infobox}
+    \begin{mdframed}[%
+        frametitle={Box \theinfobox\ #1},
+        skipabove=\baselineskip plus 2pt minus 1pt,
+        skipbelow=\baselineskip plus 2pt minus 1pt,
+        linewidth=2pt,
+        frametitlerule=true,
+        frametitlebackgroundcolor=gray!50,
+        backgroundcolor=gray!10,
+        roundcorner=7pt
+    ]%
+}{%
+    \end{mdframed}
+}
+ 
+%% Euler for math | Palatino for rm | Helvetica for ss | Courier for tt
+%\renewcommand{\rmdefault}{ppl} % rm
+%%\linespread{1.05}        % Palatino needs more leading
+%\usepackage[scaled]{helvet} % ss
+%\usepackage{courier} % tt
+%\usepackage{euler} % math
+%%\usepackage{eulervm} % a better implementation of the euler package (not in gwTeX)
+%\normalfont
+\pretolerance=10000
+\tolerance=2000 
+\emergencystretch=10pt
+
+
+% bibliographie par chapitre :
+%     * mettre \bibliography et \bibliographystyle dans chaque fichier inclu
+%\usepackage[margin=1in]{geometry}
+%\usepackage{parskip}
+%\setlength{\parindent}{0pt}
+%\nonzeroparskip
+%\setlength{\parskip}{0.8cm plus4mm minus3mm}
+\setlength{\headsep}{20pt}
+
+%\usepackage[Sonny]{fncychap}
+\addto\captionsfrench{\renewcommand{\chaptername}{Chapitre}}
+
+\usepackage{titlesec}
+%\usepackage{xcolor} 
+
+%\titleformat{\chapter}[display]
+%  {\normalfont\bfseries\LARGE}
+%  {\chaptertitlename~\thechapter}{1pc}
+%  {{\color{black}\titlerule[2pt]}\vspace{1pc}\MakeUppercase}
+%\titleformat{name=\chapter,numberless}
+%  {\normalfont\bfseries\LARGE}{}{1pc}
+%  {\MakeUppercase}
+
+\usepackage{csquotes}
+\usepackage{kpfonts}
+\usepackage{xcolor,calc, blindtext}
+\definecolor{chaptercolor}{gray}{0.8}
+% helper macros
+\newcommand\numlifter[1]{\raisebox{-2cm}[0pt][0pt]{\smash{#1}}}
+\newcommand\numindent{\kern37pt}
+\newlength\chaptertitleboxheight
+\makechapterstyle{hansen}{
+  \renewcommand\printchaptername{\raggedleft}
+  \renewcommand\printchapternum{%
+    \begingroup%
+    \leavevmode%
+    \chapnumfont%
+    \strut%
+    \numlifter{\thechapter}%
+    \numindent%
+\endgroup%
+}
+  \renewcommand*{\printchapternonum}{%
+    \vphantom{\begingroup%
+      \leavevmode%
+      \chapnumfont%
+      \numlifter{\vphantom{9}}%
+      \numindent%
+      \endgroup}
+    \afterchapternum}
+  \setlength\midchapskip{0pt}
+  \setlength\beforechapskip{0.5\baselineskip}
+  \setlength{\afterchapskip}{3\baselineskip}
+  \renewcommand\chapnumfont{%
+    \fontsize{4cm}{0cm}%
+    \bfseries%
+    \sffamily%
+    \color{chaptercolor}%
+  }
+  \renewcommand\chaptitlefont{%
+    \normalfont%
+    \huge%
+    \bfseries%
+    \raggedleft%
+  }%
+  \settototalheight\chaptertitleboxheight{%
+    \parbox{\textwidth}{\chaptitlefont \strut bg\\bg\strut}}
+  \renewcommand\printchaptertitle[1]{%
+    \parbox[t][\chaptertitleboxheight][t]{\textwidth}{%
+      %\microtypesetup{protrusion=false}% add this if you use microtype
+      \chaptitlefont\strut ##1\strut}%
+}}
+\chapterstyle{hansen}
+\aliaspagestyle{chapter}{empty} % just to save some space
+
+%\chapterstyle{ell}
+
+
+
+
+%\DoubleSpacing
+\OnehalfSpacing
+
+\usepackage[natbib=true,maxcitenames=2,maxbibnames=99,style=authoryear-comp,backend=biber,
+doi=false, isbn=false, url=false]{biblatex}% \renewbibmacro*{name:andothers}{% Based on name:andothers from biblatex.def
+%   \ifboolexpr{
+%     test {\ifnumequal{\value{listcount}}{\value{liststop}}}
+%     and
+%     test \ifmorenames
+%   }
+%     {\ifnumgreater{\value{liststop}}{1}
+%        {\finalandcomma}
+%        {}%
+%      \andothersdelim\bibstring[\emph]{andothers}}
+%     {}}
+%\usepackage{biblatex-chicago}
+% \addbibresource{allbiblio.bib}
+% \addbibresource{BPSensor.bib}
+% \addbibresource{STdiag.bib}
+% \addbibresource{FIP.bib}
+\addbibresource{Biblio/MergedBib.bib}
+
+%\bibliography{allbiblio.bib}
+
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{subfig}
+\usepackage{caption}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{subfloat}
+\usepackage{longtable}
+\usepackage{tabu}
+\renewcommand{\arraystretch}{0.75}
+
+\makeatletter
+\providecommand\phantomcaption{\caption@refstepcounter\@captype}
+\makeatother
+
+\setsecnumdepth{subsection}
+\settocdepth{subsection}
+\semiisopage[12]
+\usepackage[hidelinks]{hyperref}
+
+\settrimmedsize{297mm}{210mm}{*}
+\setlength{\trimtop}{0pt}
+\setlength{\trimedge}{\stockwidth}
+\addtolength{\trimedge}{-\paperwidth}
+\settypeblocksize{634pt}{448.13pt}{*}
+\setulmargins{4cm}{*}{*}
+\setlrmargins{*}{*}{1.5}
+\setmarginnotes{17pt}{51pt}{\onelineskip}
+\setheadfoot{\onelineskip}{2\onelineskip}
+\setheaderspaces{*}{2\onelineskip}{*}
+\checkandfixthelayout
+
+\makeheadrule{headings}{\textwidth}{\normalrulethickness}
+
+\addto{\captionsenglish}{\renewcommand{\abstractname}{Résumé}}
+\addto{\captionsenglish}{\renewcommand{\partname}{Partie}}
+\addto{\captionsenglish}{\renewcommand{\chaptername}{Chapitre}}
+\addto{\captionsenglish}{\renewcommand{\contentsname}{Table des matières}}
+\addto{\captionsenglish}{\renewcommand{\listfigurename}{Liste des figures}}
+\addto{\captionsenglish}{\renewcommand{\listtablename}{Liste des tables}}
+\addto{\captionsenglish}{\renewcommand{\tablename}{Liste des tableaux}}
+
+\usepackage{tocloft}
+\setlength{\cftpartnumwidth}{2.0em}
+\setlength{\cftchapternumwidth}{2.2em}
+\setlength{\cftsectionnumwidth}{3.2em}
+% \makeatletter
+% \renewcommand{numberline}[1]{%
+%  \@cftbsnum #1\@cftasnum~\@dftasnumb%
+% }
+% \makeatother
+
+\usepackage{chngcntr}
+\numberwithin{chapter}{part}
+
+% \makeatletter
+% \@addtoreset{chapter}{part}
+%	\renewcommand{\l@chapter}{l@dottedtocline{1}{1.5em}{2.6em}}
+
+%#############	Select files to compile
+\includeonly{1_CorpsDeThese/Intro}
+%#############
+
+\title{Manuscrit de thèse}
+
+\begin{document}
+%d�but du doc
+\frontmatter
+
+% le titre
+\include{0_Title/title2}
+
+%\newgeometry{left=1in,right=1.5in,top=1.2in,bottom=1.2in}
+
+% table des matieres generale
+\begin{Spacing}{1}
+
+\input{abstract.tex}
+
+%\tableofcontents
+
+%\setlength{\parskip}{0.0pt plus 1.0pt}
+
+\tableofcontents
+
+\end{Spacing}
+%\setlength{\parskip}{0.8cm plus4mm minus3mm}
+
+
+%d�but du texte
+\mainmatter
+% inclusion des chapitres
+
+\title{Compétition par interférence, température et dynamique des populations
+structurées : \'Etude expérimentale et théorique chez le Collembole
+\textit{Folsomia candida}}
+\newpage
+\include{1_CorpsDeThese/Intro}
+ 
+
+\part{Annexes}
+\appendix
+
+\include{2_Methodo/Methodo1}
+% 
+\include{2_Methodo/Methodo2}
+
+%\part{Compétition par interférence et populations structurées}
+
+%\include{3-2_ChapExp2/ChapExp1}
+% 
+
+\chapter[Accès à la ressource taille dépendante et dominance
+des géants: etude à long terme de populations expérimentales du Collembole
+\textit{Folsomia candida}][Etude à long terme]{Accès à la ressource taille
+dépendante et dominance des géants: etude à long terme de populations
+expérimentales du Collembole
+\textit{Folsomia candida}}\label{chap:3-1}
+
+
+\include{4_ChapThe1/ChapThe1}
+
+% \chapter[Compétition par interférence: effet de la perturbation de la structure
+% d'une population sur sa dynamique][Perturbation de la structure]{Compétition par
+% interférence:
+% effet de la perturbation de la structure d'une population sur sa dynamique}
+
+%\part{Interaction température -- interférence}
+
+\include{5_ChapExp3/ChapExp3}
+
+\chapter{Interactions entre température et compétition par interférence dans le
+modèle de populations structurées}
+
+%\include{7_DiscussionG/DiscussionG}
+
+%\include{Annexes/Annexe1}
+
+\backmatter
+
+\begin{Spacing}{1}
+%\printbibliography[title={Livres cités},type=book]
+%\printbibliography[title={Articles cit\'es},type=article]
+%\printbibliography[title={Autres citations}, nottype=article, nottype=book]
+\printbibliography[title={Bibliographie}]
+
+\newpage 
+\listoftables
+\newpage 
+\lofimagetrue
+\listoffigures
+\lofimagefalse
+
+\end{Spacing}
+
+\end{document}
+
