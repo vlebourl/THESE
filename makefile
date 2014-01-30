@@ -35,11 +35,12 @@ all: $(TEX).tex
 	@biber $(TEX)
 	$(CC) $(TEX)
 	$(CC) $(TEX)
+	@mv $(TEX).pdf Manuscrit.pdf
 	@echo
 	@echo 
 	@echo "fin ;)"
 	@echo
-
+	
 
 # efface les fichiers .log .aux .toc .bbl .blg 
 .PHONY: purge
