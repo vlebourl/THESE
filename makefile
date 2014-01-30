@@ -36,6 +36,7 @@ all: $(TEX).tex
 	$(CC) $(TEX)
 	$(CC) $(TEX)
 	@mv $(TEX).pdf Manuscrit.pdf
+	@rm -vf *.aux *.bbl *.blg $(TEX).log $(TEX).bcf $(TEX).out $(TEX).toc $(TEX).mtc* $(TEX).lof $(TEX).lot $(TEX).maf
 	@echo
 	@echo 
 	@echo "fin ;)"
