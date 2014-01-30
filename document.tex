@@ -11,6 +11,7 @@
 \usepackage{yfonts}
 \newcommand{\enluminure}[2]{\lettrine[lines=2]{\small \initfamily #1}{#2}}
 
+\usepackage[inline]{enumitem}
 \usepackage[babel=true,kerning=true]{microtype}
 \usepackage{lipsum}
 \usepackage[intlimits]{amsmath}
@@ -69,9 +70,10 @@
 %\usepackage{euler} % math
 %%\usepackage{eulervm} % a better implementation of the euler package (not in gwTeX)
 %\normalfont
-\pretolerance=10000
-\tolerance=2000 
-\emergencystretch=10pt
+
+% \pretolerance=1000
+% \tolerance=1000 
+% \emergencystretch=10pt
 
 
 % bibliographie par chapitre :
@@ -154,8 +156,8 @@
 
 
 
-\DoubleSpacing
-%\OnehalfSpacing
+%\DoubleSpacing
+\OnehalfSpacing
 
 \usepackage[natbib=true,maxcitenames=2,maxbibnames=99,style=authoryear-comp,backend=biber,
 doi=false, isbn=false, url=false]{biblatex}

@@ -85,7 +85,7 @@ libraries such as \texttt{lattice} \autocite{sarkar2008a} or \texttt{ggplot2}
 But although higly customizable, the plotting functions are often difficult to
 handle for beginners.
 
-\begin{figure}[!h] % Figure 1 
+\begin{figure}[!ht] % Figure 1 
 \centering
 \includegraphics[height=0.75\textheight]{2_Methodo/Fig/Fig22-1.pdf}
 \caption[\lofimage{2_Methodo/Fig/Fig22-1.pdf}Classical representation of a
@@ -133,7 +133,7 @@ install.packages('STdiag',repos="http://r-forge.r-project.org")
 
 \subsection{Importaing and formating the data}
 
-\paragraph{Data frame.}
+\subsubsection{Data frame.}
 \texttt{STdiag} uses the lattice function \texttt{levelplot}
 \autocite{sarkar2008a}.
 As a consequence, the basic data format is a three column data frame containing the
@@ -141,7 +141,7 @@ $X$ (time), $Y$ (structure such as age or size) and $Z$ (number of individuals)
 coordinates. The data frame has $TxS$ lines where $T$ is the number of time
 values and $S$ the number of structure classes.
 
-\paragraph{Matrix.}
+\subsubsection{Matrix.}
 Another possibility is to use a matrix description of the data using two vectors
 $x$ and $y$ of size respectively $T$ and $S$ for the time and structure
 coordinates, and a matrix $z$ of size $TxS$ containing the number of individuals
@@ -153,7 +153,7 @@ DataFrame <- Matrix2DataFrame(z, x, y, xlab="time", ylab="structure",
 zlab="number").
 \end{verbatim}
 
-\paragraph{Individual based data.}
+\subsubsection{Individual based data.}
 The function \texttt{Indiv2DataFrame} is also provided to convert
 individually based data to a data-frame that can be plotted with \texttt{STdiag}. This function handles a
 data-frame containing one line per individual and, for each individual, the time
@@ -168,7 +168,7 @@ DataFrame <- Indiv2DataFrame(IndivData, classes=50).
 
 \subsection{Generating the plots}
 
-\paragraph{Data frame.}
+\subsubsection{Data frame.}
 The simplest way to generate the basic plot is to use the data frame
 formulation. If the columns of the data frame are in a time-structure-number
 order, a simple call to
@@ -185,7 +185,7 @@ numeric vector or a vector of dates of classes \texttt{POSIXlt},
 \texttt{POSIXct} or \texttt{Date}. Class \texttt{factor} is not yet supported
 for date format.
 
-\paragraph{Matrix.}
+\subsubsection{Matrix.}
 To use the matrix formulation, call either
 \begin{verbatim}
 STdiag(Matrix)
@@ -201,7 +201,7 @@ STdiag(x=time, y=structure, z=Matrix).
 Our method is implemented with several options to adjust the plot to be as
 informative as possible.
 
-\begin{figure}[!h] % Figure 2 
+\begin{figure}[!ht] % Figure 2 
 \centering
 \includegraphics[height=0.70\textheight]{2_Methodo/Fig/Fig22-2}
 \caption[\lofimage{2_Methodo/Fig/Fig22-2}Collembolan population dynamics plotted
@@ -217,7 +217,7 @@ some cohorts, the growth rate of which can be estimated (black lines, c).
 \label{Fig22-2}
 \end{figure}
 
-\paragraph{Colour palette.}
+\subsubsection{Colour palette.}
 The readability of the diagram partly relies on the choice of colours for the
 palette (Figure \ref{Fig22-2}a, b). The hues are sorted following either a gray scale from
 pale gray to black or a rainbow gradient (Figure \ref{Fig22-2}a, b, c).This can be adjusted
@@ -225,14 +225,14 @@ using the option color="palette" inside \texttt{STdiag()} where palette can be
 one of the following: \texttt{gray, topo, terrain, heat, cm, rainbow} or by
 default \texttt{tim} (see tim.colors in library fields, \citealp{furrer2012a}).
 
-\paragraph{Logarithmic scale.}
+\subsubsection{Logarithmic scale.}
 When the number of individuals in the different classes differs by several
 orders of magnitude (Figure \ref{Fig22-1}b) we recommend using a logarithmic scale to increase
 the readability of the generated graphics. The option
 \texttt{log=TRUE}$/$\texttt{FALSE} allows the user to switch easily between
 linear and logarithmic colour scales.
 
-\paragraph{Interpolation.}
+\subsubsection{Interpolation.}
 The quality of the diagram can sometimes be improved by applying an
 interpolation to smooth the representation and link together uneven time
 intervals by creating evenly spaced data (Figure \ref{Fig22-2}d).The interpolation method
@@ -250,7 +250,7 @@ $X$ (time) and $Y$ (structure) axes. If those options are left empty, the
 function uses the minimum distance between two points in the first and second columns as
 intervals for respectively $X$ and $Y$ axes.
 
-\paragraph{Kernel density estimate.}
+\subsubsection{Kernel density estimate.}
 The function STdiag~provides an option \texttt{smooth=TRUE}$/$\texttt{FALSE} to
 plot a weighted kernel density estimate of the data using an axis-aligned bivariate normal
 kernel, where the data are the time-structure coordinates weighted by the number
@@ -268,7 +268,7 @@ smoothing factor (small \texttt{sm}).
 
 \section{Reading and interpreting ST diagrams}
 
-\paragraph{Dynamics of a laboratory population of collembolan.}
+\subsection{Dynamics of a laboratory population of collembolan.}
 We used as a first practical example of temporal dynamic of a structured
 population, some data issued from the close follow-up of an experimental
 population of a springtails maintained in our lab during about $600$ days. We
@@ -320,7 +320,7 @@ mean size of both adults and yearlings: the body length in the population increa
 1989 to 1994 \autocite{chamaille-jammes2006a} and decreases
 thereafter.
 
-\begin{figure}[!h] % Figure 3 
+\begin{figure}[!ht] % Figure 3 
 \centering
 \includegraphics[width=0.85\textwidth]{2_Methodo/Fig/Fig22-3.pdf}
 \caption[\lofimage{2_Methodo/Fig/Fig22-3.pdf}The follow-up of a population of the common lizard]{ The follow-up of a population of the common lizard. The plots represent the
@@ -359,7 +359,7 @@ purchases that has arisen during the H1N1 influenza pandemic which occurred from
 September 2009 to January 2010 in France (Figure \ref{Fig22-4}b, c;
 \citealp{lemaitre2010a,lemaitre2012a}).
 
-\begin{figure}[!h] % Figure 4 
+\begin{figure}[!ht] % Figure 4 
 \centering
 \includegraphics[width=0.85\textwidth]{2_Methodo/Fig/Fig22-4.pdf}
 \caption[\lofimage{2_Methodo/Fig/Fig22-4.pdf}Antibiotic consumption in France]{ Graphical representation of the antibiotic consumption in France from 1st July
