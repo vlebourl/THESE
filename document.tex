@@ -71,9 +71,9 @@
 %%\usepackage{eulervm} % a better implementation of the euler package (not in gwTeX)
 %\normalfont
 
-% \pretolerance=1000
-% \tolerance=1000 
-% \emergencystretch=10pt
+\pretolerance=10000
+\tolerance=10000 
+\emergencystretch=10pt
 
 
 % bibliographie par chapitre :
@@ -156,8 +156,8 @@
 
 
 
-\DoubleSpacing
-%\OnehalfSpacing
+%\DoubleSpacing
+\OnehalfSpacing
 
 \usepackage[natbib=true,maxcitenames=2,maxbibnames=99,style=authoryear-comp,backend=biber,
 doi=false, isbn=false, url=false]{biblatex}
@@ -241,7 +241,7 @@ doi=false, isbn=false, url=false]{biblatex}
 %	\renewcommand{\l@chapter}{l@dottedtocline{1}{1.5em}{2.6em}}
 
 %#############	Select files to compile
-%\includeonly{1_CorpsDeThese/Intro}
+%\includeonly{}
 %#############
 
 \title{Manuscrit de thèse}
@@ -312,8 +312,7 @@ expérimentales du Collembole
 
 \include{5_ChapExp3/ChapExp3}
 
-%\chapter{Interactions entre température et compétition par interférence dans le
-%modèle de populations structurées}
+%\chapter{Interactions entre température et compétition par interférence dans lemodèle de populations structurées}
 
 %\include{7_DiscussionG/DiscussionG}
 
@@ -333,7 +332,7 @@ expérimentales du Collembole
 \lofimagetrue
 \listoffigures
 \lofimagefalse
-
+ 
 \end{Spacing}
 
 \end{document}
