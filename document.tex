@@ -21,6 +21,8 @@
 \newlength{\lofthumbsize}
 \setlength{\lofthumbsize}{5em}
 
+\usepackage{wrapfig}
+
 \newif\iflofimage
 \DeclareRobustCommand*{\lofimage}[2][]{%
   \iflofimage
@@ -31,6 +33,12 @@
   \fi
   \ignorespaces
 }
+% \DeclareRobustCommand*{\lofimage}[2][]{%
+%   \iflofimage
+%     \protect\lettrine[image=true,lhang=0,lines=3,findent=2pt]{#2}
+%   \fi
+%   \ignorespaces
+% }
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \usepackage{float}
 
@@ -71,9 +79,9 @@
 %%\usepackage{eulervm} % a better implementation of the euler package (not in gwTeX)
 %\normalfont
 
-\pretolerance=10000
-\tolerance=10000 
-\emergencystretch=10pt
+%\pretolerance=0000
+%\tolerance=0000 
+%\emergencystretch=10pt
 
 
 % bibliographie par chapitre :
@@ -159,19 +167,29 @@
 %\DoubleSpacing
 \OnehalfSpacing
 
-\usepackage[natbib=true,maxcitenames=2,maxbibnames=99,style=authoryear-comp,backend=biber,
-doi=false, isbn=false, url=false]{biblatex}
-% \renewbibmacro*{name:andothers}{% Based on name:andothers from biblatex.def
-%   \ifboolexpr{
-%     test {\ifnumequal{\value{listcount}}{\value{liststop}}}
-%     and
-%     test \ifmorenames
-%   }
-%     {\ifnumgreater{\value{liststop}}{1}
-%        {\finalandcomma}
-%        {}%
-%      \andothersdelim\bibstring[\emph]{andothers}}
-%     {}}
+\usepackage[natbib=true,uniquelist=false,maxcitenames=2,maxbibnames=99,style=authoryear-comp,backend=biber,
+doi=false, isbn=false, url=false,sorting=ynt]{biblatex}
+
+
+\DefineBibliographyExtras{french}{%
+\renewcommand{\mkbibnamelast}[1]{{\hyphenrules{nohyphenation}#1}}%
+}
+
+\renewbibmacro*{name:andothers}{% Based on name:andothers from biblatex.def
+  \ifboolexpr{
+    test {\ifnumequal{\value{listcount}}{\value{liststop}}}
+    and
+    test \ifmorenames
+  }
+    {\ifnumgreater{\value{liststop}}{1}
+       {\finalandcomma}
+       {}%
+     \andothersdelim\bibstring[\emph]{andothers}}
+    {}}
+\renewcommand*{\finalnamedelim}{%
+  \ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}%
+  \addspace\&\space}
+
 %\usepackage{biblatex-chicago}
 % \addbibresource{allbiblio.bib}
 % \addbibresource{BPSensor.bib}
@@ -241,7 +259,7 @@ doi=false, isbn=false, url=false]{biblatex}
 %	\renewcommand{\l@chapter}{l@dottedtocline{1}{1.5em}{2.6em}}
 
 %#############	Select files to compile
-%\includeonly{}
+%\includeonly{1_CorpsDeThese/Intro}
 %#############
 
 \title{Manuscrit de thèse}
@@ -324,7 +342,7 @@ expérimentales du Collembole
 %\printbibliography[title={Livres cités},type=book]
 %\printbibliography[title={Articles cit\'es},type=article]
 %\printbibliography[title={Autres citations}, nottype=article, nottype=book]
-\printbibliography[title={Bibliographie}]
+\printbibliography[title={Bibliographie},sorting=nyt]
 
 \newpage 
 \listoftables
