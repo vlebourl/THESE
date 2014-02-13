@@ -11,6 +11,7 @@
 \usepackage{yfonts}
 \newcommand{\enluminure}[2]{\lettrine[lines=2]{\small \initfamily #1}{#2}}
 
+\usepackage[inline]{enumitem}
 \usepackage[babel=true,kerning=true]{microtype}
 \usepackage{lipsum}
 \usepackage[intlimits]{amsmath}
@@ -19,6 +20,8 @@
 \usepackage[pdftex]{graphicx}
 \newlength{\lofthumbsize}
 \setlength{\lofthumbsize}{5em}
+
+\usepackage{wrapfig}
 
 \newif\iflofimage
 \DeclareRobustCommand*{\lofimage}[2][]{%
@@ -30,6 +33,12 @@
   \fi
   \ignorespaces
 }
+% \DeclareRobustCommand*{\lofimage}[2][]{%
+%   \iflofimage
+%     \protect\lettrine[image=true,lhang=0,lines=3,findent=2pt]{#2}
+%   \fi
+%   \ignorespaces
+% }
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \usepackage{float}
 
@@ -69,9 +78,10 @@
 %\usepackage{euler} % math
 %%\usepackage{eulervm} % a better implementation of the euler package (not in gwTeX)
 %\normalfont
-\pretolerance=10000
-\tolerance=2000 
-\emergencystretch=10pt
+
+%\pretolerance=0000
+%\tolerance=0000 
+%\emergencystretch=10pt
 
 
 % bibliographie par chapitre :
@@ -154,21 +164,32 @@
 
 
 
-\DoubleSpacing
-%\OnehalfSpacing
+%\DoubleSpacing
+\OnehalfSpacing
 
-\usepackage[natbib=true,maxcitenames=2,maxbibnames=99,style=authoryear-comp,backend=biber,
-doi=false, isbn=false, url=false]{biblatex}% \renewbibmacro*{name:andothers}{% Based on name:andothers from biblatex.def
-%   \ifboolexpr{
-%     test {\ifnumequal{\value{listcount}}{\value{liststop}}}
-%     and
-%     test \ifmorenames
-%   }
-%     {\ifnumgreater{\value{liststop}}{1}
-%        {\finalandcomma}
-%        {}%
-%      \andothersdelim\bibstring[\emph]{andothers}}
-%     {}}
+\usepackage[natbib=true,uniquelist=false,maxcitenames=2,maxbibnames=99,style=authoryear-comp,backend=biber,
+doi=false, isbn=false, url=false,sorting=ynt]{biblatex}
+
+
+\DefineBibliographyExtras{french}{%
+\renewcommand{\mkbibnamelast}[1]{{\hyphenrules{nohyphenation}#1}}%
+}
+
+\renewbibmacro*{name:andothers}{% Based on name:andothers from biblatex.def
+  \ifboolexpr{
+    test {\ifnumequal{\value{listcount}}{\value{liststop}}}
+    and
+    test \ifmorenames
+  }
+    {\ifnumgreater{\value{liststop}}{1}
+       {\finalandcomma}
+       {}%
+     \andothersdelim\bibstring[\emph]{andothers}}
+    {}}
+\renewcommand*{\finalnamedelim}{%
+  \ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}%
+  \addspace\&\space}
+
 %\usepackage{biblatex-chicago}
 % \addbibresource{allbiblio.bib}
 % \addbibresource{BPSensor.bib}
@@ -309,8 +330,7 @@ expérimentales du Collembole
 
 \include{5_ChapExp3/ChapExp3}
 
-\chapter{Interactions entre température et compétition par interférence dans le
-modèle de populations structurées}
+%\chapter{Interactions entre température et compétition par interférence dans lemodèle de populations structurées}
 
 %\include{7_DiscussionG/DiscussionG}
 
@@ -322,7 +342,7 @@ modèle de populations structurées}
 %\printbibliography[title={Livres cités},type=book]
 %\printbibliography[title={Articles cit\'es},type=article]
 %\printbibliography[title={Autres citations}, nottype=article, nottype=book]
-\printbibliography[title={Bibliographie}]
+\printbibliography[title={Bibliographie},sorting=nyt]
 
 \newpage 
 \listoftables
@@ -330,7 +350,7 @@ modèle de populations structurées}
 \lofimagetrue
 \listoffigures
 \lofimagefalse
-
+ 
 \end{Spacing}
 
 \end{document}

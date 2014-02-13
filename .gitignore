@@ -6,3 +6,12 @@
 /*/*/.DS_Store
 .project
 .settings
+/.texlipse
+/tempPartial00000.pdf
+/tempPartial00000.synctex.gz
+/makeall.sh
+/tempPartial*
+.texpadtmp
+Biblio/MergedBib.sente6lib/
+*xml
+1_CorpsDeThese/.DS_Store

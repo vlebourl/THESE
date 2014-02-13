@@ -35,15 +35,17 @@ all: $(TEX).tex
 	@biber $(TEX)
 	$(CC) $(TEX)
 	$(CC) $(TEX)
+	@mv $(TEX).pdf Manuscrit.pdf
+	@rm -vf *.aux *.bbl *.blg $(TEX).log */*.aux *.bcf $(TEX).out $(TEX).toc $(TEX).mtc* $(TEX).lof $(TEX).lot $(TEX).maf
 	@echo
 	@echo 
 	@echo "fin ;)"
 	@echo
-
+	
 
 # efface les fichiers .log .aux .toc .bbl .blg 
 .PHONY: purge
 purge:
-	@rm -vf *.aux *.bbl *.blg $(TEX).log $(TEX).out $(TEX).toc $(TEX).mtc* $(TEX).lof $(TEX).lot $(TEX).maf
+	@rm -vf *.aux */*.aux *.bcf *.bbl *.blg $(TEX).log $(TEX).out $(TEX).toc $(TEX).mtc* $(TEX).lof $(TEX).lot $(TEX).maf
 	@echo "done"
 

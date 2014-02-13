@@ -57,35 +57,35 @@ Structured populations are complex assemblages of individuals differing in age,
 reproductive stage or physiological state such as size or body condition (Figure
 \ref{Fig22-1}a, b). Different approaches have been used to display structured
 population dynamics (Figure \ref{Fig22-1}c, d, e): By displaying the whole population size fluctuations,
-the structure is not taken into account (Figure \ref{Fig22-1}c) \autocite{schrautzer2011a}.
+the structure is not taken into account (Figure \ref{Fig22-1}c) \autocites{schrautzer2011a}.
 The structure can be roughly considered by splitting individuals into separate
 groups (of size or stages) whose dynamics can be displayed on adjacent plots
-\autocite{plaistow2009a} or, to facilitate comparisons, on overlaid curves (Figure
-\ref{Fig22-1}d) or on a stacked bar plot (Figure \ref{Fig22-1}e) \autocite{madsen2000a}. But condensed
+\autocites{plaistow2009a} or, to facilitate comparisons, on overlaid curves (Figure
+\ref{Fig22-1}d) or on a stacked bar plot (Figure \ref{Fig22-1}e) \autocites{madsen2000a}. But condensed
 three-dimensional diagrams are required to finely display the structure dynamic
 especially when the structuring factor is continuous (size, age). These diagrams
 encompass “event history diagrams” that allow the graphical representation of
 life history traits at the individual level of a whole
-cohort\autocite{carey1998a,carey2008a} or the production of “shaded contour
+cohort\autocites{carey1998a,carey2008a} or the production of “shaded contour
 maps” such as the ones used to represent the temporal dynamics of
 aged-structured demographic rates such as death or birth rates in human
-populations \autocite{vaupel1997a,vaupel1998a}.These graphical representations
+populations \autocites{vaupel1997a,vaupel1998a}.These graphical representations
 are mainly used in human demography to represent secular changes in
 age-dependent demographicrates
-\autocite{vaupel1987a,vaupel1997a,vaupel1998a,andreev2000a,erlangsen2003a}.
+\autocites{vaupel1987a,vaupel1997a,vaupel1998a,andreev2000a,erlangsen2003a}.
 To our knowledge, despite their interest, such powerful visual displays have
 almost never been used in ecology to represent the temporal dynamics of
-structured populations \autocite{faerovig2002a}. This may result from the
+structured populations \autocites{faerovig2002a}. This may result from the
 prohibiting cost of publishing colours pictures. But with the development of
 online publishing, colour methods are becoming more widely used.
-The R software \autocite{team2012a} is a language and environment for data
+The R software \autocites{team2012a} is a language and environment for data
 manipulation, calculation, statistical computing and graphic display. R provides
-libraries such as \texttt{lattice} \autocite{sarkar2008a} or \texttt{ggplot2}
-\autocite{wickham2009a} to produce heatmaps.
+libraries such as \texttt{lattice} \autocites{sarkar2008a} or \texttt{ggplot2}
+\autocites{wickham2009a} to produce heatmaps.
 But although higly customizable, the plotting functions are often difficult to
 handle for beginners.
 
-\begin{figure}[!h] % Figure 1 
+\begin{figure}[!ht] % Figure 1 
 \centering
 \includegraphics[height=0.75\textheight]{2_Methodo/Fig/Fig22-1.pdf}
 \caption[\lofimage{2_Methodo/Fig/Fig22-1.pdf}Classical representation of a
@@ -133,19 +133,19 @@ install.packages('STdiag',repos="http://r-forge.r-project.org")
 
 \subsection{Importaing and formating the data}
 
-\paragraph{Data frame.}
+\subsubsection{Data frame.}
 \texttt{STdiag} uses the lattice function \texttt{levelplot}
-\autocite{sarkar2008a}.
+\autocites{sarkar2008a}.
 As a consequence, the basic data format is a three column data frame containing the
 $X$ (time), $Y$ (structure such as age or size) and $Z$ (number of individuals)
 coordinates. The data frame has $TxS$ lines where $T$ is the number of time
 values and $S$ the number of structure classes.
 
-\paragraph{Matrix.}
+\subsubsection{Matrix.}
 Another possibility is to use a matrix description of the data using two vectors
 $x$ and $y$ of size respectively $T$ and $S$ for the time and structure
 coordinates, and a matrix $z$ of size $TxS$ containing the number of individuals
-at each coordinate. This mimics the format used by function image \autocite{team2012a}.
+at each coordinate. This mimics the format used by function image \autocites{team2012a}.
 In case one wishes to use the frame format for data in the matrix format, the
 function \texttt{Matrix2DataFrame} is provided:
 \begin{verbatim}
@@ -153,7 +153,7 @@ DataFrame <- Matrix2DataFrame(z, x, y, xlab="time", ylab="structure",
 zlab="number").
 \end{verbatim}
 
-\paragraph{Individual based data.}
+\subsubsection{Individual based data.}
 The function \texttt{Indiv2DataFrame} is also provided to convert
 individually based data to a data-frame that can be plotted with \texttt{STdiag}. This function handles a
 data-frame containing one line per individual and, for each individual, the time
@@ -168,7 +168,7 @@ DataFrame <- Indiv2DataFrame(IndivData, classes=50).
 
 \subsection{Generating the plots}
 
-\paragraph{Data frame.}
+\subsubsection{Data frame.}
 The simplest way to generate the basic plot is to use the data frame
 formulation. If the columns of the data frame are in a time-structure-number
 order, a simple call to
@@ -185,7 +185,7 @@ numeric vector or a vector of dates of classes \texttt{POSIXlt},
 \texttt{POSIXct} or \texttt{Date}. Class \texttt{factor} is not yet supported
 for date format.
 
-\paragraph{Matrix.}
+\subsubsection{Matrix.}
 To use the matrix formulation, call either
 \begin{verbatim}
 STdiag(Matrix)
@@ -201,7 +201,7 @@ STdiag(x=time, y=structure, z=Matrix).
 Our method is implemented with several options to adjust the plot to be as
 informative as possible.
 
-\begin{figure}[!h] % Figure 2 
+\begin{figure}[!ht] % Figure 2 
 \centering
 \includegraphics[height=0.70\textheight]{2_Methodo/Fig/Fig22-2}
 \caption[\lofimage{2_Methodo/Fig/Fig22-2}Collembolan population dynamics plotted
@@ -217,7 +217,7 @@ some cohorts, the growth rate of which can be estimated (black lines, c).
 \label{Fig22-2}
 \end{figure}
 
-\paragraph{Colour palette.}
+\subsubsection{Colour palette.}
 The readability of the diagram partly relies on the choice of colours for the
 palette (Figure \ref{Fig22-2}a, b). The hues are sorted following either a gray scale from
 pale gray to black or a rainbow gradient (Figure \ref{Fig22-2}a, b, c).This can be adjusted
@@ -225,14 +225,14 @@ using the option color="palette" inside \texttt{STdiag()} where palette can be
 one of the following: \texttt{gray, topo, terrain, heat, cm, rainbow} or by
 default \texttt{tim} (see tim.colors in library fields, \citealp{furrer2012a}).
 
-\paragraph{Logarithmic scale.}
+\subsubsection{Logarithmic scale.}
 When the number of individuals in the different classes differs by several
 orders of magnitude (Figure \ref{Fig22-1}b) we recommend using a logarithmic scale to increase
 the readability of the generated graphics. The option
 \texttt{log=TRUE}$/$\texttt{FALSE} allows the user to switch easily between
 linear and logarithmic colour scales.
 
-\paragraph{Interpolation.}
+\subsubsection{Interpolation.}
 The quality of the diagram can sometimes be improved by applying an
 interpolation to smooth the representation and link together uneven time
 intervals by creating evenly spaced data (Figure \ref{Fig22-2}d).The interpolation method
@@ -250,12 +250,12 @@ $X$ (time) and $Y$ (structure) axes. If those options are left empty, the
 function uses the minimum distance between two points in the first and second columns as
 intervals for respectively $X$ and $Y$ axes.
 
-\paragraph{Kernel density estimate.}
+\subsubsection{Kernel density estimate.}
 The function STdiag~provides an option \texttt{smooth=TRUE}$/$\texttt{FALSE} to
 plot a weighted kernel density estimate of the data using an axis-aligned bivariate normal
 kernel, where the data are the time-structure coordinates weighted by the number
 of individuals. The estimate is derived from the function \texttt{kde2d} in
-package \texttt{MASS} \autocite{venables2002a}. The density estimate can be
+package \texttt{MASS} \autocites{venables2002a}. The density estimate can be
 adjusted with options sm, a positive scalar ($0$ meaning the original data and $1$ being
 the normal reference distribution kernel estimation bandwidth) defining the smoothness of
 the kernel density estimate, and $n$, the number of points on the $X$ $Y$ grid.
@@ -268,21 +268,21 @@ smoothing factor (small \texttt{sm}).
 
 \section{Reading and interpreting ST diagrams}
 
-\paragraph{Dynamics of a laboratory population of collembolan.}
+\subsection{Dynamics of a laboratory population of collembolan.}
 We used as a first practical example of temporal dynamic of a structured
 population, some data issued from the close follow-up of an experimental
 population of a springtails maintained in our lab during about $600$ days. We
 studied the species \textit{Folsomia candida} that is commonly used in laboratory and is
-easy to breed and maintained \autocite{fountain2005a}. This is
+easy to breed and maintained \autocites{fountain2005a}. This is
 an ametabolous parthenogenetic hexapod whose populations are composed only of females of
 different size because the juveniles look like minute adults and the adults
 continue to mould and grow after reaching maturity. The individuals were bred at
 $21 \degres$C in cylindric plastic boxes of $5.3$ cm diameter with a $3$ cm thick
-plaster substrate to keep the environment damp \autocite{tully2008a} (Figure
+plaster substrate to keep the environment damp \autocites{tully2008a} (Figure
 \ref{Fig22-1}a). The population is fed weekly with a mix of yeast in agar-agar in a fixed quantity
 and kept in the dark the whole time. Measures of the number and size of
 individuals are taken every one or two weeks using picture analysis with the
-image processor ImageJ \autocite{abramoff2004a,mallard2012a,mallard2013a}
+image processor ImageJ \autocites{abramoff2004a,mallard2012a,mallard2013a}
 providing the structure of the population at each time of measure (Figure \ref{Fig22-1}b).
 
 The structured time diagram (Figure \ref{Fig22-2}) immediately reveals the predominance of the
@@ -303,7 +303,7 @@ from 1989 to 2004 in a population of common lizards from the Mont Lozère in
 southern France ($1420$ m a.s.l, $44\degres30$’N, $3\degres45$’E). Data collection
 each year was structured as follows: a capture session of yearlings ($1$ year
 old individuals) and adults in June-July and a temporary transfer of pregnant females to the
-laboratory to mark and measure juveniles from birth \autocite{le-galliard2010a}.
+laboratory to mark and measure juveniles from birth \autocites{le-galliard2010a}.
 The Figure \ref{Fig22-3} reports the size structure (snout-vent length) of the
 population. We used a total of $7486$ measurements, $3935$ females and $3551$
 males.
@@ -317,10 +317,10 @@ sampling was not perfomed during the six months of the hibernation period. The
 sampled population is composed of newborns ($\approx2$ cm), yearlings ($\approx4$ cm) and
 adults ($>5$ cm). The figure also shows at a glance some secular changes in the
 mean size of both adults and yearlings: the body length in the population increases from
-1989 to 1994 \autocite{chamaille-jammes2006a} and decreases
+1989 to 1994 \autocites{chamaille-jammes2006a} and decreases
 thereafter.
 
-\begin{figure}[!h] % Figure 3 
+\begin{figure}[!ht] % Figure 3 
 \centering
 \includegraphics[width=0.85\textwidth]{2_Methodo/Fig/Fig22-3.pdf}
 \caption[\lofimage{2_Methodo/Fig/Fig22-3.pdf}The follow-up of a population of the common lizard]{ The follow-up of a population of the common lizard. The plots represent the
@@ -359,7 +359,7 @@ purchases that has arisen during the H1N1 influenza pandemic which occurred from
 September 2009 to January 2010 in France (Figure \ref{Fig22-4}b, c;
 \citealp{lemaitre2010a,lemaitre2012a}).
 
-\begin{figure}[!h] % Figure 4 
+\begin{figure}[!ht] % Figure 4 
 \centering
 \includegraphics[width=0.85\textwidth]{2_Methodo/Fig/Fig22-4.pdf}
 \caption[\lofimage{2_Methodo/Fig/Fig22-4.pdf}Antibiotic consumption in France]{ Graphical representation of the antibiotic consumption in France from 1st July
@@ -404,22 +404,22 @@ structure over time directly draw dynamics of cohorts (as in Figure \ref{Fig22-2
 
 STdiag can also be used to represent any type of data with a structuring factor
 and an aggregate statistic. For instance, this method can be used to represent
-the average mortality rate in each age-time class \autocite{vaupel1987a}, or the evolution over time of the average size depending on the age,
-illustrating the shrinkage of Soay sheeps \autocite{ozgul2009a}. It
+the average mortality rate in each age-time class \autocites{vaupel1987a}, or the evolution over time of the average size depending on the age,
+illustrating the shrinkage of Soay sheeps \autocites{ozgul2009a}. It
 can also be used for displaying data from a population model such as a physiologically
-structured one \autocite{metz1986a}. It can also be applied to
+structured one \autocites{metz1986a}. It can also be applied to
 follow the temporal dynamic of a human population structure coming for instance from
 medical survey to detect any secular or seasonal changes for example (Figure \ref{Fig22-4}).
 
 Such diagrams fulfil the criteria for excellence in statistical graphics
-\autocite{tufte1990a}: they show many numbers within a small space (high
+\autocites{tufte1990a}: they show many numbers within a small space (high
 data density) thus making coherent large data sets without distorting the data; they reveal the
 data at several levels of detail, from fine structure to broad overview,
 encourage the eyes to compare different pieces of data and induce the viewer to
-think about the substance rather than about the method \autocite{tufte2001a}.
+think about the substance rather than about the method \autocites{tufte2001a}.
 
 With the development of automatic data acquisition and prolific databases
-\autocite{le-galliard2012a,mallard2012a,mallard2013a}, the use of such a
+\autocites{le-galliard2012a,mallard2012a,mallard2013a}, the use of such a
 graphical display should become more common in population ecology but also in many other fields such as epidemiology or medical
 surveys.
 
