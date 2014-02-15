@@ -164,8 +164,6 @@
 
 
 
-%\DoubleSpacing
-\OnehalfSpacing
 
 \usepackage[natbib=true,uniquelist=false,maxcitenames=2,maxbibnames=99,style=authoryear-comp,backend=biber,
 doi=false, isbn=false, url=false,sorting=ynt]{biblatex}
@@ -240,6 +238,7 @@ doi=false, isbn=false, url=false,sorting=ynt]{biblatex}
 \addto{\captionsenglish}{\renewcommand{\listfigurename}{Liste des figures}}
 \addto{\captionsenglish}{\renewcommand{\listtablename}{Liste des tables}}
 \addto{\captionsenglish}{\renewcommand{\tablename}{Liste des tableaux}}
+\addto{\captionsenglish}{\renewcommand{\appendixname}{Annexe}}
 
 \usepackage{tocloft}
 \setlength{\cftpartnumwidth}{2.0em}
@@ -261,6 +260,8 @@ doi=false, isbn=false, url=false,sorting=ynt]{biblatex}
 %#############	Select files to compile
 %\includeonly{1_CorpsDeThese/Intro}
 %#############
+%\DoubleSpacing
+\OnehalfSpacing
 
 \title{Manuscrit de thèse}
 
@@ -301,22 +302,16 @@ structurées : \'Etude expérimentale et théorique chez le Collembole
 
 \part{Annexes}
 \appendix
-
+\selectlanguage{english}
 \include{2_Methodo/Methodo1}
 % 
 \include{2_Methodo/Methodo2}
 
 %\part{Compétition par interférence et populations structurées}
 
-%\include{3-2_ChapExp2/ChapExp1}
-% 
+\include{3-1_ChapExp1/ChapExp1}
+ 
 
-\chapter[Accès à la ressource taille dépendante et dominance
-des géants: etude à long terme de populations expérimentales du Collembole
-\textit{Folsomia candida}][Etude à long terme]{Accès à la ressource taille
-dépendante et dominance des géants: etude à long terme de populations
-expérimentales du Collembole
-\textit{Folsomia candida}}\label{chap:3-1}
 
 
 \include{4_ChapThe1/ChapThe1}
