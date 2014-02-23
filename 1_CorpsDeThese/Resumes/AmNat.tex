@@ -153,7 +153,7 @@ dériver les taux vitaux individuels.
 \begin{center}
 \includegraphics[width=0.95\textwidth]{1_CorpsDeThese/Resumes/Fig/AN01}
 \caption[\lofimage{1_CorpsDeThese/Resumes/Fig/AN01}Règle du
-$\kappa$$]{Schéma de la règle du $\kappa$ et de ses implication}
+$\kappa$]{Schéma de la règle du $\kappa$ et de ses implication}
 \label{fig:AN1}
 \end{center}
 \end{figure}
@@ -371,4 +371,241 @@ croissance proche de la maturité (``goulet d'étranglement de la croissance''),
 reprendre une croissance rapide jusqu'à des tailles très élevées. La
 distribution de la taille dans la population est alors très asymétrique vers les
 juvéniles, mais reste continue jusqu'à des tailles proches de la taille maximum
-possible $l_m$ (Figure \ref{fig:AN3}g).
+possible $l_m$ (Figure \ref{fig:AN3}g). Les formes particulières des fonctions
+de croissance et d'accès à la ressource s'expliquent d'abord par la faible
+densité d'adultes au delà de $0.6mm$ et leur grande compétitivité, ils
+sont donc rapidement capables de monopoliser la ressource et grandissent très
+rapidement. La partie linéaire après $l=1.4mm$ est quand a elle la conséquence
+de la forme naturelle de la fonction de croissance de Von Bertalanffy. 
+
+\subsection{Des cycles induits par l'interférence}
+
+La bifurcation sur l'interférence montre l'apparition de cycles lorsque le
+niveau de compétition par interférence est suffisamment élevé ($I>1.56$ Figure
+\ref{fig:AN2}). La Figure \ref{fig:AN3} (j-l) montre le détail de la dynamique
+pour une valeur de compétition par interférence de $I=2.0$. On constate sur le
+diagramme structure temps (j) que les cycles dans la structure de la population
+sont très différents des cycles de génération induits par les juvéniles (a). La
+période des cycles a été multipliée par $3$ et l'amplitude est environ $7.5$
+fois supérieure. Un cycle dans la dynamique commence par un pulse de naissance
+fait fortement augmenter la taille de la population lorsqu'une cohorte d'individus
+atteint la maturité. La population est alors multi-modale avec une majorité
+de juvéniles, des adultes nouvellement matures et quelques vieux individus de
+très grande taille. Après le pulse de naissance, les individus qui viennent de
+maturer grandissent, ce qui réduit la ressource disponible pour les individus
+les plus petits qui stoppent leur croissance. Deux groupes se forment, des
+juvéniles de moins de $0.35mm$ et des juvéniles et jeunes adultes entre $0.5$ et
+$0.75mm$. Pendant cette période, les adultes continent de se reproduire,
+augmentant la densité de juvéniles. Les individus les plus vieux commencent
+ensuite à mourir, diminuant progressivement la pression de compétition sur les
+jeunes adultes qui atteignent à leur tour des tailles extrêmes. La pression de
+compétition est cependant maintenue sur les plus petits juvéniles qui ne peuvent
+pas grandir. Le nombre d'individus reproducteur commence alors à diminuer,
+réduisant progressivement la taille de la population et la pression de
+compétition due à l'interférence. Quand suffisamment d'adultes sont mort, la
+pression de compétition a assez diminué pour que les plus petits juvéniles
+reprennent leur croissance et maturent, provoquant un nouveau cycle dans la
+dynamique. 
+
+On constate sur le panel (k) que la position du goulet d'étranglement du taux de
+croissance sur l'axe des X varie entre $0.33$ et $0.55mm$ suivant le moment dans
+le cycle, mais reste systématiquement inférieur à la taille à maturité
+$l_j=0.6mm$, ce qui provoque l'accumulation d'individus immature dans la
+population. L'accès aux ressources (l) montre le même phénomène. Les individus
+n'accèdent plus suffisamment aux ressources pour poursuivre leur croissance dont
+le taux devient négatif (causant une mortalité accrue). Ils arrêtent donc leur
+croissance à un stade immature, ce qui fait diminuer le nombre de reproducteur
+et relâche progressivement la pression de compétition par interférence. C'est
+précisément la position du goulet d'étranglement sous la taille à maturité qui
+déstabilise la dynamique vers ces nouveaux cycles. 
+
+\subsection{Bifurcation dans le plan $(I,\mu)$}
+
+Le taux de mortalité basal $\mu$ étant connu pour affecter la dynamique des
+populations structurées par taille, en stabilisant la dynamique vers un point
+fixe lorsqu'il augmente, nous nous somme intéressé à son effet couplé à celui du
+niveau de compétition par interférence. La Figure \ref{fig:AN4} montre le type
+de dynamique obtenu en fonction de la position dans le plan de paramètres
+$(I,\mu)$.
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=0.95\textwidth]{1_CorpsDeThese/Resumes/Fig/AN05}
+\caption[\lofimage{1_CorpsDeThese/Resumes/Fig/AN05}Diagramme de
+bifurcation dans le plan $(I,\mu)$]{Diagramme de
+bifurcation dans le plan $(I,\mu)$. Les régions sans hachure sont les régions
+correspondant à un point fixe. Les hachures représentent le type de cycle
+obtenu. La zone grise correspond à la zone de survie des individus de très
+grande taille. La ligne pointillée et les points marquent respectivement la
+bifurcation de la Figure \ref{fig:AN2} et les simulations de la Figure
+\ref{fig:AN3}}
+\label{fig:AN4}
+\end{center}
+\end{figure}
+
+Dans un premier temps, on peut distinguer deux régions distinctes sur ce
+diagramme (une région blanche et une région grisée) qui délimitent les zones où
+la taille maximale atteinte est soit proche de la taille à maturité (en blanc),
+soit proche de la taille maximum possible (en gris). Il est intéressant de noter
+que la limite entre ces deux régions dépend assez peu de la mortalité basale
+( $I$ entre $1.2$ et $1.6$).
+
+On remarque également qu'en l'absence d'interférence, les cycles de génération
+induits par les juvéniles sont stabilisés lorsque la mortalité basale augmente,
+conformément à la théorie déjà établie \autocites{de-roos1997a}. Lorsque la
+compétition par interférence est présente, cette stabilisation se produit pour
+des valeurs plus basses de mortalité. De plus, l'augmentation du taux de
+mortalité semble également stabiliser les cycles due à l'interférence, mais pour
+des valeur très élevées ($\mu > 0.02$). 
+
+A faible mortalité mais au niveau d'interférence, la dynamique est irrégulière
+et les résultats sont peu fiables à cause de problèmes numériques liés à
+l'intégration des équations du modèle. En revanche, pour une interférence
+intermédiare et une faible mortalité, on peut observer une situation
+intéressante. En effet, on constate qu'il existe une petite région où des cycles
+de génération semblables à ceux dues aux juvéniles se maintiennent alors que la
+taille maximum atteinte est proche de la taille maximum possible. Mais ces
+cycles sont dégénérés et quelques individus parviennent de temps en temps à
+s'échapper du goulet de croissance et atteindre des tailles géantes. Mais ces
+individus sont rares et les dynamiques irrégulières. 
+
+\section{Discussion}
+
+Nous avons mis en évidence au cours de cette étude que la compétition par
+interférence est une interaction qui, en conférant un avantage aux individus les
+plus grands, vient contrecarrer les effets de la compétition taille dépendante
+par exploitation. La dépendance à la taille de l'ingestion d'énergie et de son
+utilisation confère un avantage aux individus les plus petits par la compétition
+par exploitation \autocites{peters1986a,persson1998a,de-roos2013a} comme le
+prédit la théorie du budget énergétique dynamique \autocites{kooijman2000a}.
+Dans l'intervalle de niveaux de compétition par interférence que nous étudions
+ici, l'équilibre compétitif entre les plus petits et les plus grands individus
+bascule progressivement d'un avantage aux juvéniles, du à la compétition par
+exploitation, à un avantage aux grands adultes, du à la compétition par
+interférence. Entre les deux extrêmes, les compétitions par exploitation et
+interférence s'équilibre et la population se stabilise. Les transitions observée
+dans la Figure \ref{fig:AN2} sont très comparables à celles causées par des
+modifications de la dépendance en taille de la compétition par exploitation,
+telles que l'augmentation des pentes des fonctions allométriques pour le taux
+d'attaque \autocites{persson1998a} ou pour le taux de consommation
+\autocites{de-roos2003a}. Cependant, les mécanismes sous jacents restent très
+différents. En effet, la transition vers des cycles dominés par les adultes dans
+les études de \textcites{persson1998a} et \textcites{de-roos2003a} se produisent
+pour des valeurs de paramètre peu réalistes. Déjà prédite par
+\textcites{de-roos2003a}, notre étude propose une hypothèse alternative
+conduisant à des cycles de génération dominés par les adultes.
+
+Bien que les cycles induits par l'interférence ne soient pas strictement des
+cycles dominés par les adultes (``adult driven generation cycles'') selon la
+définition de \textcites{de-roos2003a}, ils partagent avec eux une
+caractéristique essentielle, à savoir le fait que les oscillation reposent sur
+la domination compétitive des individus les plus grands qui empêchent une
+nouvelle génération de dominer la population tant qu'ils sont suffisamment
+nombreux. Dans ce sens, les cycles induits par l'interférence font partie
+des cycles dominés par les adultes.  
+
+\subsection{Détecter la compétition par interférence dans des populations
+naturelles} 
+
+Le cannibalisme est un autre mécanisme qui confère un avantage aux
+plus grands individus d'une population sur les plus petits en les protégeant de la
+compétition par exploitation \autocites{claessen2000a,claessen2002a}, et peut
+ainsi conduire à la stabilisation des cycles dominés par les juvéniles et
+l'émergence d'individus de grande taille. Ces similarités font qu'il est
+nécessaire d'avoir des clés permettant de discriminer différentes causes pouvant
+mener aux même observations dans des populations naturelles. 
+
+D'après nos résultats théoriques, plusieurs critères peuvent être utilisés pour
+identifier le rôle de la compétition par interférence dans la dynamique d'une
+population structurée. 
+\begin{enumerate*}[label=(\roman*)]
+\item L'observation la plus évident de l'effet de l'interférence est l'émergence
+de géants dans la population. Bien que d'autres cause puissent provoquer cette
+émergence telles que le cannibalisme ou une niche spécifique pour les plus
+grands individus, combinée aux éléments suivant, c'est un indice en faveur
+de la compétition par interférence. 
+\item La présence d'un goulet d'étranglement de la croissance est un signe fort
+de l'action d'une compétition par interférence assez intense.
+\item Ce goulet d'étranglement résulte en une distribution de la taille
+fortement asymétrique en faveur des plus petits individus dans une population
+stable. 
+\item Dans une population cyclique, cela résulte en une distribution
+multi-modale.
+\item Dans les deux cas, les trajectoires de croissance individuelles
+ressemblent à une double courbe de croissance. Les individus subissent un
+ralentissement violent de la croissance autour de la maturité avant une
+accélération brutale passé le goulet d'étranglement. 
+\item L'observation des traits d'histoire de vie individuels permets donc de
+distinguer les cycles causés par l'interférence des cycles dominés par les
+juvéniles. Dans le dernier cas, les individus grandissent rapidement et
+s'arrêtent après maturation alors que dans le premier cas la croissance s'arrête
+vers la maturation pour ne reprendre que si la cohorte adulte dominante a
+suffisamment diminuée. 
+\item Enfin, dans le cas où les données individuelles ne sont pas accessibles,
+le ratio du temps de maturation moyen par la période des cycles tel que défini
+par \textcites{murdoch2002a} permet également de faire la distinction entre les
+différents cycles. Comme expliqué en introduction de cette thèse
+(Section \ref{modelPopStru} page \pageref{modelPopStru}), une valeur du ration
+autour de $1$. Dans notre modèle, les cycles dominés par les juvéniles ont un
+ration autour de $0.8$ alors que les cycles induits par l'interférence ont un
+ration proche de $1.5$. Ainsi, des cycles de génération avec un ratio supérieur
+à 1 pourraient être une indication du rôle de l'interférence. Cela pourrait par
+exemple être le cas pour les saumons dans la baie de Bristol (ratio$=1.2$) ou de
+la rivière Togiak ($1.3$), la morue d'Iceland ($1.6$), le castor de Californie
+(1.6), ou l'ours noir du Yukon (1.5). Ces espèces étant territoriales, elles
+sont en effet susceptibles à la compétition intra-spécifique par interférence. 
+\end{enumerate*}
+
+\subsection{L'interférence dans nos populations expérimentales}
+
+Nous avons montré dans le Chapitre \ref{chap:sp} que nos populations
+expérimentales de collemboles se caractérisent systématiquement par
+l'existence de plusieurs modes dans la distribution de la taille des individus.
+Généralement deux, un mode assez dense de juvéniles dont la taille est proche de
+la taille à la naissance, et un mode d'adultes dont la taille est très
+supérieure à la taille à maturité (parfois jusqu'à plus de trois fois
+supérieur). Exceptionnellement, un troisième mode peut être observé, on a alors
+un premier mode de juvéniles, un mode avec des petits adultes et un mode avec
+des grands adultes. Mais nous avons montré que cette situation n'était stable
+que localement, et ne pouvait être atteinte qu'avec des conditions initiale de
+distribution de la taille très particulières qui ne se retrouvent quasiment
+jamais hors de l'initialisation des populations.
+
+De plus, nous avons montré que les individus de grande taille jouent un rôle
+prépondérant dans la dynamique de la population notamment en empêchant la
+croissance des juvéniles lorsque les cohortes d'adultes sont suffisamment
+denses. 
+
+Ces observations recoupent ainsi plusieurs des critères proposés à l'issue de
+notre étude théorique pour identifier le rôle de la compétition par
+interférence. Cette analyse apporte des arguments supplémentaires pour confirmer
+le rôle de la compétition par interférence dans la dynamique des populations de
+collemboles, et confirment ainsi du même fait l'intérêt des méthodes empiriques
+employées dans l'étude précédente pour exhumer des données le rôle de
+l'interférence.
+
+\section{En conclusion}
+
+Notre objectif était ici d'étudier les conséquences de la compétition taille
+dépendante par interférence sur la dynamique des populations, permettant ainsi
+de compléter les résultats existants sur la compétition par exploitation et le
+cannibalisme comme mécanismes intra-spécifiques de régulation. Nous avons donc
+développé un modèle simple de dynamique de populations physiologiquement
+structurées qui à notre avis rassemble les aspects essentiels de la compétition
+intra-spécifique par interférence. Ce modèle n'a ainsi pas pour vocation de
+prédire précisément des dynamiques de populations, bien qu'il ait été paramétré
+pour les Collemboles \textit{Folsomia candida}, mais plutôt de démontrer les
+conséquences dynamiques de la compétition par interférence. La comparaison avec
+nos données expérimentales issues des populations de collemboles montrent qu'il
+est possible de détecter le rôle de la compétition par interférence dans des
+populations expérimentales ou naturelles. 
+
+Dans notre cas, nous avons pu apporter de nouveaux éléments confirmant le rôle
+de la compétition par interférence dans les dynamiques des populations de
+collemboles, mais il reste encore des différences entre le modèle et les séries
+temporelles observées, et les mécanismes détaillés à l'oeuvre dans les
+populations expérimentales ne sont encore pas éclaircis. Dans le Chapitre
+suivant, nous avons mené en parallèle deux études expérimentales afin de mieux
+comprendre a façon dont les individus se répartissent l'accès à la ressource, et
+le rôle des individus de différentes tailles dans la dynamique de la structure
+des populations.
