@@ -182,27 +182,26 @@ l'accès au ressources.
 \begin{center}
 \includegraphics[width=1\textwidth]{1_CorpsDeThese/Resumes/Fig/SM02}
 \caption[\lofimage{1_CorpsDeThese/Resumes/Fig/SM02}Comparaison des
-distributions cumulées]{Comparaison des distributions cumulées entre la
+distributions cumulées]{(a) Comparaison des distributions cumulées entre la
 population totale (890 individus) et différents échantillons (200 individus).
-Les flèches montrent le biais dans les distribution des échantillons bleus et
-rouges.}
+}
 \label{fig:SM2}
 \end{center}
 \end{figure}
 
 Les différences de distribution en taille des individus qui accèdent à la
 ressources sont mesurées et comparées à la population originale en comparant les
-fonctions de distribution cumulées de la taille (Figure \ref{fig:SM2}). Nous
+fonctions de distribution cumulées de la taille (Figure \ref{fig:SM2}a). Nous
 utilisons les test de Kolmogorov-Smirnov (KS) à deux échantillons afin de tester
 la significativité de la différence et sa direction. Si la distribution cumulée
 de la taille des individus accédant à la pastille est au dessus de celle de la
 population totale, cela signifie qu'il y a en proportion d'avantage de petits
 individus accédant à la pastille de ressource que dans la population totale
-(Figure \ref{fig:SM2}, échantillon rouge). A l'inverse, si la fonction de
+(Figure \ref{fig:SM2}a, échantillon rouge). A l'inverse, si la fonction de
 distribution cumulée de la taille des individus accédant à la pastille est en
 dessous de celle dans la population totale, cela signifie qu'en proportion, plus
 d'individus de grande taille se trouvent sur la ressource que dans la population
-totale (Figure \ref{fig:SM2}, échantillon bleu).
+totale (Figure \ref{fig:SM2}a, échantillon bleu).
 
 Les individus qui accèdent à la ressource représentent un sous échantillon de la
 population totale. Même si le test KS est significatif, nous avons vérifié que
@@ -210,10 +209,24 @@ cet échantillon est significativement différent d'un échantillon de même tai
 tiré aléatoirement dans la population. Pour chaque population observée, nous
 avons tiré aléatoirement $1000$ échantillons de même taille que celui des
 individus accédant aux ressources afin de créer un intervalle de confiance des
-échantillons aléatoires de la population totale (Figure \ref{fig:SM2},
+échantillons aléatoires de la population totale (Figure \ref{fig:SM2}a,
 échantillons verts). Si la distribution des individus accédant aux ressources
 est en dehors de cet intervalle, cela confirme que le biais mesuré par le test KS
 n'est pas du au hasard.
+
+Afin d'avoir une mesure de ce biais et de sa direction, nous comparons la
+distance entre la distribution cumulée de la taille dans la population d'origine
+et la distribution moyenne de la taille des individus accédant à la ressource.
+La distance est calculée comme étant l'aire entre les deux courbes. La distance
+est soit absolue, il s'agit alors simplement de la mesure de l'aire entre les
+deux courbes, soit relative, il s'agit alors d'une aire positive si la
+distribution de l'échantillon est au dessus de celle de la distribution
+d'origine, négative si elle est en dessous. On peut alors tracer sur un graph la
+distance relative en fonction de la distance absolue (\ref{fig:SM2)b}). La
+position du point donne une indication de la direction et de l'intensité du
+biais.
+
+
 
 \section{Résultats}
 
@@ -401,8 +414,125 @@ interférence comme mécanisme de régulation de la dynamique.
 
 \subsection{Observation comportementale}
 
-Les observations comportementales et la mesure du biais de taille dans la
-capacité à accéder aux ressource va nous permettre de confirmer le rôle de la
-compétition par interférence. 
+Dans un second temps, nous nous sommes donc intéressés aux comportements
+individuels d'accès à la ressource disponible. Les observations ont été
+réalisées sur certaines des populations ont été manipulées. Ces observations
+comportementales et la mesure du biais de taille dans la capacité à accéder aux
+ressource va nous permettre de confirmer le rôle de la compétition par
+interférence.
 
+\subsubsection{Exemple d'observation comportementale}
 
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=1\textwidth]{1_CorpsDeThese/Resumes/Fig/SM05b}
+\caption[\lofimage{1_CorpsDeThese/Resumes/Fig/SM05b}Cliché
+d'observation de l'accès à la ressource]{Cliché
+d'observation de l'accès à la ressource pour la population témoin HA-01 et
+cliché de la population totale.}
+\label{fig:SM5}
+\end{center}
+\end{figure}
+
+La Figure \ref{fig:SM5} montre un exemple de cliché pris au cours de
+l'observation comportementale de l'accès aux ressources. Ce cliché a été pris
+pour la population témoin HA 01. Bien que ce ne soit qu'un seul exemple de
+cliché, cet exemple est très représentatif de ce qui a été observé dans toutes
+les populations mesurées. On peut observer sur ce cliché une forte concentration
+d'individus regroupés sur la pastille de nourriture (en rouge au centre) et des
+individus plus dispersés aux alentours. Il est intéressant de constater la
+différence de taille des individus sur ou aux abords de la pastille de ressource
+comparée à la celle des individus plus éloignés et à l'ensemble des individus de
+la population. Alors que les individus éloignés semblent quasiment tous être des
+juvéniles, les individus les plus gros présents sur ce clichés sont tous sur la
+pastille de ressource ou dans ses environs proches.
+Ceci est observé alors même qu'en nombre d'individus, cette population est
+largement dominée par les juvéniles. Si l'accès à la ressource était indépendant
+de la taille, on s'attendrait donc à avoir davantage de juvéniles présents sur
+la pastille que de grands individus. Il y a donc un biais de taille corporel
+manifeste dans l'accès à la ressource.
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{1_CorpsDeThese/Resumes/Fig/SM06}
+\caption[\lofimage{1_CorpsDeThese/Resumes/Fig/SM06}Mesure du biais
+d'accès aux ressources]{Mesure du biais
+d'accès aux ressources pour la population témoin HA 01. Test de
+Kolmogorov-Smirnov de comparaison de deux échantillons: gris en dessous du
+rouge: $p<10^{-10}$.}
+\label{fig:SM6}
+\end{center}
+\end{figure}
+
+Le cliché présenté en Figure \ref{fig:SM5} fait parti d'une série de 10 clichés
+de la même population à 15 minutes d'intervalle. La Figure \ref{fig:SM6}
+présente les fonctions de distribution cumulées de la population totale (rouge),
+des individus accédant à la ressource sur chacun des clichés (gris clair), de la
+moyenne des individus accédant à la ressource (gris foncé), et de 1000
+échantillons aléatoires de même taille que la distribution moyenne des individus
+accédant à la ressource. On constate que les dix distributions gris sont
+systématiquement en dessous de la distribution dans la population entière. Qui
+plus est, elles sont également systématiquement en dehors de l'intervalle des
+sous échantillons aléatoires. Le test de comparaison des distributions,
+effectué avec la comparaison moyenne est également extrêmement significatif.
+Cela nous permet d'affirmer qu'il y a un biais significatif en faveur des
+individus les plus grands de la population dans l'accès à la ressource. En
+effet, alors que $80\%$ des individus de la population mesurent moins de
+$0.5mm$, ils ne représentent qu'un tiers des individus présents sur ou aux
+abords de la pastille de nourriture. De plus, $13\%$ des individus sur la
+ressource mesurent plus de $1.6mm$ alors qu'ils représentent moins de $5\%$ de
+la population totale. Enfin, $50\%$ des individus présents sur la pastille ont
+une taille entre $0.45$ et $1.35mm$ alors que cette classe de taille ne
+constitue que $15\%$ de la population totale.
+
+\subsubsection{Mesure du biais d'accès aux ressources}
+
+La mesure du biais par comparaison des distributions cumulées a été réalisée sur
+10 populations. La Figure \ref{fig:SM7}. On constate que dans tous les cas il
+existe un biais en faveur des individus les plus grands pour l'accès à la
+ressource. On constate également que même dans les populations où le nombre de
+grands individus est relativement important, telle que TO TE 01, le biais reste
+significatif avec une large sous représentation des $40\%$ d'individus de moins
+de $0.5mm$. 
+
+On remarque encore que même dans les populations où les juvéniles représentent
+plus de $80\%$ de la population totale (HA JM 01, HA JM 02, HA TE 02, TO MG 02),
+on ne comptabilise sur la ressource jamais plus de $50\%$ d'individus de moins
+de $0.6mm$. Sur l'ensemble des cas étudiés, les $10\%$ les plus grands des
+individus de la population totale représentent jusqu'à plus de $50\%$ des
+individus mesurés sur les ressources, et généralement autour de$20\%$.
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=1\textwidth]{1_CorpsDeThese/Resumes/Fig/SM07}
+\caption[\lofimage{1_CorpsDeThese/Resumes/Fig/SM07}Mesures du biais
+d'accès aux ressources]{Mesures du biais
+d'accès aux ressources pour 9 autres populations.}
+\label{fig:SM7}
+\end{center}
+\end{figure}
+
+Les biais en faveur des grands individus dans l'accès à la ressource semble donc
+être systématique, quelque soit la population étudié. Nous avons utilisé dans
+ces observation des population dont la structuration en taille était différente.
+Ainsi, même avec très peu de grands individus dans la population, ceux-ci sont
+très largement sur-représentés lors des comptages sur les pastilles. Il semble
+donc que la capacité des individus de grande taille à dominer la ressource soit
+commune à nos deux clones, et ne dépende que peu des conditions de densité de la
+population. Lors de la prise des clichés servant de base à ces mesures, nous
+avons également pu identifier en temps réel des comportements au cours des quels
+des individus se mettaient à tourner rapidement en rond lorsque d'autre
+s'approchaient de trop prêt, provoquant leur fuite. Ces comportements étaient
+particulièrement visibles chez les individus les plus grands, faisant fuir
+rapidement les plus petits. L'inverse n'a jamais été observé. Ainsi, la
+domination des plus grands individus sur la ressource passe notamment par des
+comportements pendant les quels ils chassent les individus plus faibles de leur
+environnement direct, empêchant les fuyards d'accéder à la ressource. Ce
+comportement répond à notre définition précédente de la compétition par
+interférence. 
+
+\section{Discussion}
+
+\subsection{Résilience de la structure en taille des populations}
+
+\subsection{Compétition par interférence}
