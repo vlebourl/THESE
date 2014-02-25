@@ -6,20 +6,21 @@ Analyse de séries temporelles longues de populations de collemboles \textit{Fol
 \vspace{5cm}
 
 \lettrine[lines=3]{A}{ujourd'hui}, les conséquences de la compétition par
-interférence sur les populations physiologiquement structurées, et plus particulièrement les
-populations structurées en taille, restent assez peu explorées. Nous
-présenterons dans ce chapitre les résultats d'une étude expérimentale au cours
-de la quelle nous avons suivi 28 populations de collemboles \textit{Folsomia
-candida} pendant $800$ à $1200$ jours. Cette étude nous a permis d'en apprendre
-d'avantage sur le rôle que joue la structure des populations à un instant donné
-sur la détermination de sa dynamique. Durant cette étude, nous avons dénombré et
-mesuré la structure détaillée de $12$ populations du clone TO et $16$
-populations du clone HA. Nous avons ensuite réalisé une analyse qualitative et
-quantitative des séries temporelles obtenues afin de relier les états (les
-structures) passés et présents avec la dynamique sa dynamique future. En
-particulier, cette étude nous a permis de mieux comprendre le rôle essentiel que
-joue la présence d'individus de grande taille dans la régulation de la dynamique
-des populations et de leur structure. 
+interférence sur les populations physiologiquement structurées, et plus
+particulièrement les populations structurées en taille, restent assez peu
+explorées. Nous présenterons dans ce chapitre les résultats d'une étude
+expérimentale au cours de la quelle nous avons suivi 28 populations de
+collemboles \textit{Folsomia candida} pendant $800$ à $1200$ jours. Cette étude
+nous a permis d'en apprendre d'avantage sur le rôle que joue la structure des
+populations à un instant donné sur la détermination de sa dynamique. Durant
+cette étude, nous avons dénombré et mesuré la structure détaillée de $12$
+populations du clone TO et $16$ populations du clone HA. Nous avons ensuite
+réalisé une analyse qualitative et quantitative des séries temporelles obtenues
+afin de relier les états (les structures) passés et présents de chaque
+population avec sa dynamique future.
+En particulier, cette étude nous a permis de mieux comprendre le rôle essentiel
+que joue la présence d'individus de grande taille dans la régulation de la
+dynamique des populations et de leur structure.
 
 Les travaux présentés dans ce chapitre sont en cours d'écriture pour
 publication, et peuvent être retrouvés dans l'Annexe \ref{Ann:SP}.
@@ -28,19 +29,21 @@ publication, et peuvent être retrouvés dans l'Annexe \ref{Ann:SP}.
 
 \subsection{Conditions d'élevage et mesures des populations}
 
-Nous avons élevé et mesuré toutes les semaines 28 populations de deux clones de
+Nous avons élevé 28 populations de deux clones de
 collemboles \textit{Folsomia candida} dans les conditions décrites dans le
 Chapitre \ref{chap:method}: $12$ populations du clone TO et $16$
-populations du clone HA. Les mesures de nombre d'individus et de structure en
-taille des populations ont été réalisées toutes les semaines en suivant la
-méthode automatisée décrite dans le Chapitre \ref{chap:method}, Section \ref{sec:bpsensor}. 
+populations du clone HA. Pour chaque population les mesures de nombre
+d'individus et de structure en taille des populations ont été réalisées toutes
+les unes à deux semaines en suivant la méthode automatisée décrite dans le
+Chapitre \ref{chap:method}, Section \ref{sec:bpsensor}.
 
 \subsection{Analyse qualitative des séries temporelles}
 
-Nous nous sommes d'abord intéressés aux dynamique sur le long
-terme de la structures des populations. Nous avons étudié de manière
+Nous nous sommes d'abord intéressés aux dynamiques sur le long
+terme de la structure des populations. Nous avons étudié de manière
 qualitative ces dynamiques en traçant les séries temporelles structurées sur des
-diagrammes structure-temps afin de faire ressortir le maximum d'information.
+diagrammes structure-temps afin de faire ressortir le maximum d'information sur
+la dynamique de la structure.
 Nous avons alors séparé notre analyse en deux temps.
 
 \subsubsection{Etat de la population}
@@ -54,28 +57,29 @@ niveau de densité de la population.
 \subsubsection{Dynamique de la structure de la population}
 
 Dans un second temps, nous nous sommes attachés à décrire les dynamiques
-temporaires que l'on peut observer sur les diagrammes structure temps. Nous
+temporaires que l'on peut observer sur les diagrammes structure-temps. Nous
 avons essayé de déterminer des motifs dynamiques que l'on pouvait rattacher à
 certains types de structures de populations, telles que celles décrites au
-paravant, ou de changements dans ces structures.
+par avant, ou à certains changements dans ces structures.
 
 \subsection{Analyse quantitative des dynamique de populations}
 
 Suite à la description qualitative des dynamiques, nous avons réalisé une
-analyse quantitative des structures observées et de leur dynamiques. 
+analyse quantitative des structures observées et de leur dynamique. 
 
 \subsubsection{Analyse en composante principale}
 
 A chaque date de mesure, les données comprennent le nombre d'individus et pour
-chacun sa longueur corporelle. Nous avons regroupé les données de l'ensemble des
-populations à toutes les dates de mesures et nous avons discrétisé la taille en
-classes de $0.1mm$ de $0$ à $3mm$. Nous obtenons ainsi un tableau de données de
-$3341$ lignes (une ligne par classe de taille par date par population) et $30$
-colonnes. Chacune des colonne peut alors être considéré comme un des vecteurs de
-l'espace à $30$ dimensions qui constitue l'espace de nos populations, et chaque
-ligne comme une observation dans cet espace. Étant donnée la différence d'ordre
-de grandeur dans les nombres d'individus entre juvéniles et adultes, nous avons
-utilisé le logarithme des nombre d'individus dans chacune des classes de taille. 
+chaque individu sa longueur corporelle. Nous avons regroupé les données de
+l'ensemble des populations à toutes les dates de mesures et nous avons
+discrétisé la taille en classes de $0.1mm$ de $0$ à $3mm$. Nous obtenons ainsi
+un tableau de données de $3341$ lignes (une ligne par classe de taille par date
+par population) et $30$ colonnes. Chacune des colonne peut alors être considéré
+comme un vecteurs de base dans l'espace à $30$ dimensions qui constitue l'espace
+des structures de nos populations, et chaque ligne comme une observation dans
+cet espace. Étant donnée la différence d'ordre de grandeur dans les nombres
+d'individus entre juvéniles et adultes, nous avons utilisé le logarithme des
+nombre d'individus dans chacune des classes de taille.
 
 En considérant que chaque ligne est indépendante des autres, nous avons alors
 réalisé une analyse en composantes principales (ACP) de nos données compilées.
@@ -116,22 +120,22 @@ ces transitions.
 Nous présenterons ici l'analyse détaillée de quatre populations, deux du clone
 TO et deux du clone HA, ainsi que les résultats de l'analyse de l'ensemble des
 populations. L'analyse graphique de chacune des populations est disponible à la
-fin de l'article en Annexe \ref{Ann:SP}. 
+fin de l'article en Annexe \ref{Ann:SP} page \pageref{Ann:SP}. 
 
 \subsection{Etude descriptive}
 
 \subsubsection{Etats des populations}
 
 La première partie de cette étude concerne une description qualitative des
-périodes stables de la structure des populations (\ref{fig:SP1}). On appellera
-état des populations ces structures caractéristiques que l'on retrouve dans les
+périodes stables de la structure des populations (Figure \ref{fig:SP1}). On
+appellera état des populations ces structures caractéristiques que l'on retrouve dans les
 différentes populations. 
 
 \begin{figure}[!ht]
 \begin{center}
 \includegraphics[width=0.95\textwidth]{1_CorpsDeThese/Resumes/Fig/SP01}
 \caption[\lofimage{1_CorpsDeThese/Resumes/Fig/SP01}Dynamiques de la
-structure de 4 populations]{Dynamiques de la structure de 4 populations de
+structure de 4 populations]{Dynamique de la structure de 4 populations de
 collembole. (a) Clone TO, réplicat 3. (b) Clone HA, réplicat 15. (c) Clone TO,
 replicat 11. (d) Clone HA, réplicat 4. Les flèches noires en (a) et (b) montrent
 des périodes de recrutement. Les flèches noires de (c) et (d) montrent des
@@ -145,16 +149,16 @@ Les Figures \ref{fig:SP1}a et b montrent deux populations aux structures
 relativement stables, mais dont la distribution en taille diffère. Dans le
 premier cas, on constate que la distribution de la taille est fortement
 bi-modale avec un groupe de juvéniles très dense ($>700$ individus de moins de
-$5mm$) et un groupe de d'adultes ($<250$ individus de plus de $0.8mm$), mais
+$0.5mm$) et un groupe de d'adultes ($<250$ individus de plus de $0.8mm$), mais
 très peu d'individus de taille intermédiaire. Dans le second cas, on retrouve
 ces deux même groupes pendant la totalité de la série temporelle, mais avec une
 longue période pendant la quelle un troisième groupe de très grands adultes
-subsiste. Ces distributions multi-modales sont universelles chez toutes les
+subsiste ($>1.2mm$). Ces distributions multi-modales sont universelles dans les
 populations étudiées. La plupart des populations ont une structure bi-modale,
 plus ou moins stable dans le temps, tandis que certaines populations montrent
 une structure tri-modale, exclusivement chez le clone HA. Le clone HA est donc
 cable de produire des adultes de très grand taille à la survie très longue, ce
-que TO est incapable de faire. 
+que TO est incapable de faire.
 
 \subsubsection{Dynamique de la structure}
 
@@ -165,30 +169,32 @@ processus dynamiques sont à l'oeuvre.
  
 \paragraph{Recrutement de cohortes}
 
-Un premier processus remarcable est le recrutement de juvéniles dans les classes
-d'adultes (flèches sur les Figures \ref{fig:SP1}a et b). Ces périodes de
-recrutement sont relativement courtes comparées à la longueur des séries
-temporelles étudiées, et se retrouve plus ou moins fréquemment, mais dans
-l'ensemble des populations étudiées. On constate sur la Figure \ref{fig:SP1}b
-que ces recrutements n'atteignent jamais la cohorte d'adultes les plus grands.
+Un premier processus remarquable est le recrutement de juvéniles dans les
+classes d'adultes (flèches sur les Figures \ref{fig:SP1}a et b). Ces périodes de
+recrutement  durent entre quelques dizaines et quelques centaines de jours, et
+se retrouve plus ou moins fréquemment, mais dans l'ensemble des populations
+étudiées. On constate sur la Figure \ref{fig:SP1}b que ces recrutements
+n'atteignent jamais la cohorte d'adultes les plus grands.
 Ceci est vrai pour toutes les populations dans les quelles un groupe d'adultes
 de très grande taille subsiste. Lorsque ces individus géants sont présents dans
 une populations, il semble alors impossible pour les autres de grandir jusqu'à
-ces tailles. 
+ces tailles.
 
 Ces périodes de recrutement permettent également d'estimer des taux de
 croissance corporelle en fonction des conditions de la population (clone et
 densité dans les différentes classes) en mesurant la pente de la cohorte qui
 recrute. Ainsi, le taux de croissance de la cohorte marquée par la seconde
 flèche de la Figure \ref{fig:SP1}a est d'environ $5\cdot 10^{-3}mm/j$, soit
-$1mm$ tous les 200 jours. 
+$1mm$ tous les 200 jours. L'étude de ces taux de croissance en fonction de la
+densité et des conditions de température fera l'objet du Chapitre \ref{chap:fip}
+et de l'Annexe \ref{Ann:fip}.
 
 Ces périodes de recrutement surviennent parfois à la suite d'événement
 catastrophiques. On constate sur la Figure \ref{fig:SP1}c (flèche) que c'est
-après la disparition quasi totale et brutale des adultes que survient un des
+après la disparition brutale et quasi-totale des adultes que survient un des
 plus gros recrutements d'individus de la série temporelle. Ceci se retrouve
 également sur d'autre population (voir Table \ref{tab:SP}). Ainsi, la
-disparition brutale des adultes de la population permet le recrutement de
+disparition brutale des adultes de la population déclenche le recrutement de
 nouveaux individus chez les adultes. 
 
 Enfin, le recrutement de nouvelle cohortes de juvéniles peut également
@@ -198,34 +204,38 @@ géants (Figure \ref{fig:SP1}b, seconde flèche), soit le seul groupe présent
 pendant une très longue période la population est composée de quelques jeunes et
 d'une très large cohorte d'adulte, avec très peu de recrutement de nouveaux
 adultes. Ce groupe d'adulte décline au cours du temps, et lorsqu'il a
-suffisamment diminué en densité (au environ de 800 jours, flèche), des
-recrutement de jeunes commencent à survenir. Ceci confirme le rôle des individus
-de plus grande taille dans le contrôle de la dynamique de la structure et le
-renouvellement des populations. 
+suffisamment diminué en densité (aux environs de $800$ jours, flèche), des
+recrutements de jeunes commencent à survenir. Ceci confirme le rôle des
+adultes de plus grande taille dans le contrôle de la dynamique de la structure
+et le renouvellement des populations. 
 
 \paragraph{Plasticité de la taille adulte}
 
 L'étude de ces séries temporelles révèle également des ajustements de la taille
 des adultes au cours des différents événements décrits précédemment. Tout
 d'abord, suivant les conditions démographiques, les cohortes d'adultes se
-stabilisent à différentes taille. Les populations montrées en exemple sur la
+stabilisent à différentes tailles. Les populations montrées en exemple sur la
 Figure \ref{fig:SP1} montrent chacune une taille d'équilibre différente. En
-particulier, la taille adulte a tendance à être plus grande quand la densité est
-plus faible. 
+particulier, la taille adulte a tendance à être plus grande quand la densité
+de la population est plus faible. Ce point fera également l'objet d'une étude
+approfondie dans le Chapitre \ref{chap:fip}.
 
 De plus, les individus sont capables d'ajuster rapidement leur taille corporelle
 en fonction des changements de conditions environnementales et démographiques.
 Après la chute catastrophique de la cohorte d'adulte montrée Figure
 \ref{fig:SP1}c, les adultes survivants reprennent une croissance très rapide sur
-une courte durée (augmentation de près de $40\%$ de leur taille corporelle). De
-même dans le cas de la sénescence des adultes (Figure \ref{fig:SP1}d), où les
+une courte durée (augmentation de près de $40\%$ de leur taille corporelle en
+quelques semaines).
+De même dans le cas de la sénescence des adultes (Figure \ref{fig:SP1}d), où les
 adultes restant grandissent de $1.7mm$ à près de $2.2mm$.
 
-A l'inverse, les adultes sont également capables de diminuer leur taille
-corporelle. Par exemple au cours des $200$ premiers jours sur la Figure
+De façon plus étonnante, les adultes sont également capables de diminuer leur
+taille corporelle. Par exemple au cours des $200$ premiers jours sur la Figure
 \ref{fig:SP1}d où la taille des adultes diminue pendant qu'une grande cohorte de
 juvéniles atteint la maturité. Ces rétrécissements des adultes ont été observées
 dans d'autres populations (HA réplicats 1 à 3, TO réplicats 5 et 9 par exemple).
+La plasticité de la taille adulte des collemboles est décrite et étudiée par
+\textcites{mallard2013b} dans ses travaux de thèse.
 
 La Table \ref{tab:SP} résume les dates où les différents événements décrits ont
 été observés dans les populations étudiées. 
@@ -304,30 +314,32 @@ propres, la ligne pointillée donne le pourcentage cumulé de variance expliqué
 \end{center}
 \end{figure}
 
-La Figure \ref{fig:SP2}a montre une cassure nette après la troisième composante,
-les trois premières composantes expliquant $70\%$ de la variance totale. Cela
-suggère que les trois premières composantes suffisent à expliquer l'essentiel
-des variations entre les structures dans nos différentes populations. La Figure
-\ref{fig:SP2}b montre que ces trois composantes se répartissent sur l'ensemble
-des classes de taille de notre espace de départ. En particulier, la première
-composante expliquant $43\%$ de la variance correspond essentiellement aux
-variation dans les individus de moins de $1.5mm$. La seconde composante quand à
-elle, qui représente $20\%$ de la variance se situe un petit peu au niveau des
-petits adultes ($0.8$ à $1.3mm$), et principalement au niveau des individus de
-plus de $1.6mm$. La troisième composante enfin permet de distinguer entre les
-individus de taille intermédiaire ($0.8$ à $1.9mm$) et les petits individus
-($<0.8mm$). Ces trois composantes permettent de définir plusieurs groupes de
-classes de taille sans a priori: (i) les juvéniles ($<0.6mm$), négatifs sur le
-premier axe et positif sur le troisième; (ii) les petits adultes (entre $0.6$
-et $1.2mm$) positif sur le second axe, négatif sur les autres; (iii) les adultes
-intermédiaires ($1.2$ à $1.9mm$) négatifs sur le troisième axe; et (iv) les
-grands adultes ($>1.9mm$), positifs sur le second axe. Ces groupes recoupent
-bien la description qualitative des diagrammes mais sans a priori sur les
-limites entre groupes. 
+La Figure \ref{fig:SP2}a représente les valeurs propres de l'ACP et le
+pourcentage cumulé de variance expliquée. On observe une cassure nette après la
+troisième composante, les trois premières composantes expliquant $70\%$ de la
+variance totale. Cela montre que les trois premières composantes permettent
+d'expliquer l'essentiel des variations entre les structures dans nos différentes
+populations. La Figure \ref{fig:SP2}b montre que ces trois composantes
+expliquent des variations sur l'ensemble de notre espace de départ sans classe
+de taille non expliquée..
+En particulier, la première composante expliquant $43\%$ de la variance
+correspond essentiellement aux variations dans les individus de moins de
+$1.5mm$. La seconde composante quand à elle, qui représente $20\%$ de la
+variance explique une partie des variations des petits adultes ($0.8$ à
+$1.3mm$), et principalement au niveau des individus de plus de $1.6mm$. La troisième
+composante enfin permet de distinguer entre les individus de taille
+intermédiaire ($0.8$ à $1.9mm$) et les petits individus ($<0.8mm$). Ces trois
+composantes permettent de définir plusieurs groupes de classes de taille sans a
+priori: (i) les juvéniles ($<0.6mm$), négatifs sur le premier axe et positif sur
+le troisième; (ii) les petits adultes (entre $0.6$ et $1.2mm$) positif sur le
+second axe, négatif sur les autres; (iii) les adultes intermédiaires ($1.2$ à
+$1.9mm$) négatifs sur le troisième axe; et (iv) les grands adultes ($>1.9mm$),
+positifs sur le second axe. Ces groupes recoupent bien la description
+qualitative des diagrammes mais sans a priori sur les limites entre groupes.
 
 Les deux premières composantes représentant $63\%$ de la variance, nous ne
 conserveront pas la troisième composante dans la suite de l'étude. Cela nous
-permettra une représentation graphique simplifiée des structures de population
+permettra une représentation graphique simplifiée des structures des populations
 dans le plan des deux premières composantes. 
 
 \subsubsection{Groupement non hiérarchique}
@@ -335,11 +347,12 @@ dans le plan des deux premières composantes.
 En utilisant l'algorithme des ``k-means'', nous avons regroupé les structures
 qui partageaient des caractéristiques communes en quatre groupes. En traçant ces
 structures ensemble, nous avons pu déterminer quatre grandes structures typiques
-de populations expérimentales (Figure \ref{fig:SP3a}): (i) type $1$, une
-structure avec beaucoup de juvéniles et des adultes de petite taille; (ii) type $2$, une structure avec des
-adultes de taille intermédiaire; (iii) type $3$, une structure avec moins de
-juvéniles et des adultes de grande taille; et (iv) type $4$, une structure
-trimodale avec des juvéniles, des petits et des grands adultes.
+de populations expérimentales (Figure \ref{fig:SP3a}): (i) une
+structure avec beaucoup de juvéniles et des adultes de petite taille (type $1$);
+(ii) une structure avec des adultes de taille intermédiaire (type $2$); (iii)
+une structure avec moins de juvéniles et des adultes de grande taille (type
+$3$); et (iv) une structure trimodale avec des juvéniles, des petits et des
+grands adultes (type $4$).
 
 \begin{figure}[!ht]
 \begin{center}
@@ -355,12 +368,13 @@ En projetant la structure de chacune des populations à chaque date de mesure
 sur les deux premières composantes de l'ACP, et en séparant les points en
 fonction du type de structure auxquels ils appartiennent, on constate que la
 séparation en quatre groupes reste remarquablement cohérente dans l'espace
-réduit à deux dimensions (Figure \ref{fig:SP3}). 
+réduit à deux dimensions (Figure \ref{fig:SP3}), et délimitent quatre régions
+distinctes du plan.
 
 \begin{figure}[!ht]
 \begin{center}
-\includegraphics[width=0.95\textwidth]{1_CorpsDeThese/Resumes/Fig/SP03}
-\caption[\lofimage{1_CorpsDeThese/Resumes/Fig/SP03}Projection des données
+\includegraphics[width=0.75\textwidth]{1_CorpsDeThese/Resumes/Fig/SP03b}
+\caption[\lofimage{1_CorpsDeThese/Resumes/Fig/SP03b}Projection des données
 sur les deux premières composantes]{Projection des structures sur les deux
 premières composantes de l'ACP et groupement en 4 types de structure. Les
 domaines délimités seront reportés sur les trajectoires temporelles dans le
@@ -370,7 +384,7 @@ plan des deux premières composantes.}
 \end{figure}
 
 Cette représentation permet une classification objective de la structure d'une
-popualtion à un temps donné dans un des quatre type de structure, ainsi que
+population à un temps donné dans un des quatre type de structure, ainsi que
 d'observer la trajectoire temporelle dans le plan des deux premières composantes
 de l'ACP et donc sa dynamique entre les différentes structures caractéristiques. 
 
@@ -381,8 +395,8 @@ de l'ACP et donc sa dynamique entre les différentes structures caractéristique
 \includegraphics[width=0.95\textwidth]{1_CorpsDeThese/Resumes/Fig/SP04}
 \caption[\lofimage{1_CorpsDeThese/Resumes/Fig/SP04}Trajectoires des
 popualtions exemple dans le plan des composantes]{Trajectoires des
-popualtions exemple dans le plan des composantes. Les lignes colorées et
-numérotées représentes les quatre grands types de structures issus de la
+populations exemples dans le plan des composantes. Les lignes colorées et
+numérotées représentes les quatre grands types de structure issus de la
 classification non hiérarchique. Chaque points est une mesure de structure à
 une date donnée. Le triangle représente le début de la trajectoire. Les lignes
 pointillées relient chronologiquement les points.}
@@ -390,17 +404,18 @@ pointillées relient chronologiquement les points.}
 \end{center}
 \end{figure}
 
-La Figure \ref{fig:SP4} montre les même populations que sur les diagrammes
+La Figure \ref{fig:SP4} montre les mêmes populations que sur les diagrammes
 structure-temps de la Figure \ref{fig:SP1}, en projetant les structures dans le
 plan des deux premières composantes. Cette représentation permet de confirmer
 numériquement que la population TO 3 (Figures \ref{fig:SP1}a et \ref{fig:SP4}a)
-reste tout le temps dans une structure de type 1 alors que la popualtion TO 11 
-(Figures \ref{fig:SP1}c et \ref{fig:SP4}c) débute dans une structure de type 1 mais converge finalement vers une structure
-de type 2 avec moins de juvéniles et des adulets plus grands. De même pour les
-populations HA  (Figures \ref{fig:SP1}bd et \ref{fig:SP4}bd) qui restent 
-toutes les deux dans une configuration de type 4 trimodale avant de basculer,
-l'une vers une structure avec des adultes petits à intermédiaires (panels b),
-l'autre vers une structure de type 3 avec des grands adultes (panels d). 
+reste tout le temps dans une structure de type 1 alors que la population TO 11
+(Figures \ref{fig:SP1}c et \ref{fig:SP4}c) débute dans une structure de type 1
+mais converge finalement vers une structure de type 2 avec moins de juvéniles et
+des adultes plus grands. De même pour les populations HA  (Figures
+\ref{fig:SP1}bd et \ref{fig:SP4}bd) qui restent toutes les deux dans une
+configuration de type 4 trimodale avant de basculer, l'une vers une structure de
+type 2 avec des adultes petits à intermédiaires (panels b), l'autre vers une
+structure de type 3 avec des grands adultes (panels d).
 
 \subsubsection{Stabilité des structures et transitions}
 
@@ -413,14 +428,14 @@ tendance avoir des transitions entre plusieurs types de structures. En
 particulier, la population HA 15 (panels b) a une phase transitoire d'une
 cinquantaine de jours en type 2 avant de se stabiliser en type 4 pendant 550
 jours, puis de revenir en type 2. En conduisant la même analyse sur chacune des
-28 populations, nous pouvons alors étudier la distribution du temps passer dans
+28 populations, nous pouvons alors étudier la distribution du temps passé dans
 chacune des régions par chacun des clones. 
 
 \begin{figure}[!ht]
 \begin{center}
 \includegraphics[width=0.95\textwidth]{1_CorpsDeThese/Resumes/Fig/SP05}
 \caption[\lofimage{1_CorpsDeThese/Resumes/Fig/SP05}Temps de
-résidence dans les structures types]{Temps passé dans chacun des type de
+résidence dans les structures types]{Temps passé dans chacun des types de
 structure caractéristique suivant les clones. Les lettres montrent les
 différences significatives dans les distributions (Tests de Kolmogorov-Smirnov
 à deux échantillons: (e) D=0.54, p=0.02, (f) D=0.78, p=0.0003, (g) D=0.93,
@@ -431,17 +446,17 @@ différences significatives entre clones dans un même type de structure.}
 \end{figure}
 
 On constate alors que les différents types de structures ne sont pas tous aussi
-stables (Figure \ref{fig:SP5}). Ainsi, bien que la variabilité soit très grand,
-les temps de résidence les plus longs observés sont dans le type 3, avec des adultes de grande taille.
+stables (Figure \ref{fig:SP5}). Ainsi, bien que la variabilité soit très grande,
+les temps de résidence les plus longs observés sont dans le type 3, avec des
+adultes de grande taille.
 Ces adultes de grande taille ont une très grande longévité et subissent peu de
 compétition de la part des autres individus, ce qui a un effet stabilisant sur
 la structure de la population. Cet effet est également visible pour les
 structures trimodales (type 4) ou les temps de résidences sont également très
-long à cause de ce même effet stabilisant des adultes de grande taille. A
-l'opposé, les structures de types 2 sont les moins stables, en effet, les
-adultes intermédiaires vont soit être exclu compétitivement par les plus petits,
-ce qui fait revenir la population en type 1, soit plus fréquemment continuer à
-grandir, ce qui fait basculer la population en type 3. 
+long. A l'opposé, les structures de types 2 sont les moins stables, en effet,
+les adultes intermédiaires vont être soit exclus compétitivement par les plus
+petits, ce qui fait revenir la population en type 1, soit plus fréquemment
+continuer à grandir, ce qui fait basculer la population en type 3.
 
 On constate également qu'il existe des différence marquées entre clones. Ainsi,
 TO passe plus de temps dans les structures de type 1 et 2 où les adultes sont
@@ -458,20 +473,21 @@ populations}
 
 Les différences de stratégies d'histoires de vie peuvent avoir un effet très
 fort sur la dynamique des populations via notamment deux impactes. Le premier
-est sur la réponse à la compétition, puisque les juvéniles sont plus compétitif
+est sur la réponse à la compétition, en effet les juvéniles sont plus compétitif
 dans le cas de l'exploitation alors que les grands adultes sont supérieurs dans
 le cas de l'interférence. Le second concerne la réponse à des changements de
 températures puisqu'on a vu que ces derniers pouvaient affecter la taille
 individuelle et les structures des populations. Les deux clones étudiés sont
-connus pour leur stratégies différents \autocites{tully2006a,tully2008a}, TO
-étant très flexible dans son investissement reproducteur alors que HA l'est très
-peu. 
+connus pour leur stratégies différentes \autocites{tully2006a,tully2008a}, TO
+étant très flexible dans son investissement reproducteur au détriment de sa
+taille corporelle, alors que HA l'est moins mais atteint des plus
+grandes tailles.
 
 Ces différences affectent la dynamique de la structure des populations puisque
 la faible flexibilité de HA et sa capacité à produire des adultes de grande
 taille lui permettent d'atteindre des structures de type 3 voir 4 très
-stables alors que TO reste dans des structures de type 1 ou 2. En effet, une
-fois établies, les adultes de grande taille dominent la population et empêchent
+stables alors que TO reste dans des structures de type 1 ou 2. Une
+fois établis, les adultes de grande taille dominent la population et empêchent
 les autres individus de grandir monopolisant la ressource, ce qui amène
 notamment à la stabilisation d'un groupe de petits adultes et des structures de
 type 4 trimodales. Cela montre l'importance de connaître les stratégies
@@ -487,7 +503,7 @@ type de structure est très stable localement, mais n'est atteignable que dans
 des conditions très particulières. Il est nécessaire: (i) que les individus
 puissent grandir vite jusqu'à des très grandes tailles, ce qui est le cas
 de HA mais pas de TO; et (ii) que le niveau de compétition soit à son minimum,
-ce qui se traduit par une absence d'adultes dans la population, et une faible
+ce qui se traduit par une absence d'adulte dans la population, et une faible
 densité de jeunes. Dans ces conditions, les jeunes présents vont alors grandir
 jusqu'aux plus grandes tailles et commencer à se reproduire tout en monopolisant
 la ressource, ce qui n'autorise les autres juvéniles à grandir que jusqu'à des
@@ -500,14 +516,18 @@ densité moyenne conduira à une structure de type 2 chez TO et de type 3 chez H
 L'importance des conditions initiales montre la coexistence des quatre
 attracteurs quasi-stables de la structure des populations. De plus, les
 transitions entre ces attracteurs sont généralement dues soit à un événement
-catastrophe, soit à la sénescence des adultes de grande taille. 
+catastrophique, soit à la sénescence des adultes de grande taille. 
 
-Enfin, cette sensibilité aux conditions initiales montre l'importance de la
+Enfin, cette sensibilité aux conditions initiales montre l'importance de
 considérer la structure dans l'étude de la dynamique des populations. En effet,
 bien que le nombre d'individus globale puisse être le même, une structure
-différente pourra mener à des dynamiques très différentes des populations, ce
-qui inclue sa survie potentielle. Cela confirme les résultats de
-\textcites{benton2005a} sur des populations d'acariens. 
+différente pourra mener à des dynamiques très différentes, ce
+qui inclue la survie potentielle de la population. Cela va dans le sens des
+résultats de \textcites{benton2005a} sur la dynamique de populations
+d'acariens structurées en âge montrant que des séquences données de changements
+environnementaux peuvent amener à des dynamiques très différentes en fonction de
+détails des conditions initiales de la structure en âge et de la densité des
+populations.
 
 \subsubsection{La compétition par interférence}
 
@@ -517,37 +537,47 @@ n'était régulé que par la compétition par exploitation, tous les individus
 parviendraient à accéder à la ressource, et la théorie du budget énergétique
 dynamique nous prédit que les grands individus seraient exclus par les plus
 petits, plus efficaces dans leur gestion de l'énergie. Dans ces conditions, les
-structures tendent vers une majorité de juvéniles et d'adultes qui ne
+structures tendraient vers une majorité de juvéniles et des adultes qui ne
 grandissent plus une fois la maturité atteinte. 
 
-Or, nos dynamiques montrent clairement la domination d'individus de grande
-taille: (i) certaines conditions permettent l'émergence et le maintient à long
-terme de cohortes d'adultes géants; (ii) lors de la disparition catastrophique
-d'une cohorte de géants, les juvéniles présents commencent immédiatement à
-grandir; (iii) la sénescence d'une cohorte d'adulte et sa disparition
-progressive se traduit aussi par une reprise de la croissance des juvéniles; et
-(iv) des cohortes très dense d'adultes s'accompagnent généralement de longues
-périodes sans recrutement. Ainsi, il semble que nos populations soient régulées
-par la domination des adultes sur la ressource disponible, privant les plus
-petits individus, les empêchant de grandir. Ceci est un mécanisme
-caractéristique de la compétition par interférence. Lorsque le nombre d'adultes
-de grande taille diminue, la pression de compétition est relâchée et les plus
-petits parviennent de nouveau à accéder à la ressource et à se développer. 
+Or, nos dynamiques montrent clairement que les individus de grande taille
+exercent une domination sur les populations: (i) certaines conditions permettent
+l'émergence et le maintient à long terme de cohortes d'adultes géants; (ii) lors
+de la disparition catastrophique d'une cohorte d'adultes, les juvéniles présents
+commencent immédiatement à grandir; (iii) la sénescence d'une cohorte d'adulte
+et sa disparition progressive se traduit aussi par une reprise de la croissance
+des juvéniles; et (iv) des cohortes très dense d'adultes s'accompagnent
+généralement de longues périodes sans recrutement. Ainsi, il semble que nos
+populations soient régulées par la domination des adultes. Un mécanisme probable
+permettant cette domination adulte serait la position privilégiée qu'ils
+occupent dans l'accès à la ressource disponible, privant les plus petits
+individus, les empêchant de grandir. Ceci est un mécanisme caractéristique de la
+compétition par interférence. Lorsque le nombre d'adultes de grande taille
+diminue, la pression de compétition est relâchée et les plus petits individus
+parviennent de nouveau à accéder à la ressource et à se développer.
 
 
 \section{En conclusion}
 
 Cette étude montre ainsi que l'analyse de la dynamique temporelle de la
-structure des populations permet d'accéder plus précisément au mécanismes en
+structure des populations permet d'accéder plus précisément aux mécanismes en
 jeu dans leur régulation, tels que le rôle des stratégies individuelles
 d'histoire de vie, ou le type d'interaction compétitive à l'oeuvre. Nous pensons
 que cette étude est un exemple concret du fait qu'une population puisse être
 contrôlée par ses adultes les plus grands, donnant lieu à des dynamiques
 complexes qui dépendent directement des stratégies d'histoire de vie des
-individus. Modéliser le rôle de la compétition par interférence dans la
-dynamique des populations structurées, dans le cadre des modèles PSP, nous
+individus et des conditions environnementales, y compris la densité de
+la population.
+Modéliser le rôle de la compétition par interférence dans la dynamique des populations structurées, dans le cadre des modèles PSP, nous
 permettra de confirmer son rôle essentiel dans la survie des
 individus de grande taille, et dans l'émergence de dynamiques temporelles
-impliquant des distributions de taille multi-modales. 
+impliquant des distributions de taille multi-modales (Chapitre
+\ref{chap:amnat}).
+
+De plus, il serait nécessaire de vérifier précisément le rôle joué par les
+adultes, notamment pour confirmer leur domination dans l'accès aux ressources,
+ce qui viendrait confirmer l'hypothèse de l'interférence comme mécanisme de
+régulation des populations. Ceci fera l'objet d'une étude expérimentale
+présentée dans le Chapitre \ref{chap:sm}.
 
 

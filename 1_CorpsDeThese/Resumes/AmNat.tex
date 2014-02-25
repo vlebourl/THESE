@@ -16,7 +16,7 @@ under review at The American Naturalist
 
 \lettrine[lines=3]{D}{ans le chapitre} précédent, nous avons pu voir le rôle
 prépondérant que jouent les individus de grande taille dans la régulation des
-populations de collembole \textit{Folsomia candida} élevés en laboratoire. Les
+populations de collembole \textit{Folsomia candida} élevées en laboratoire. Les
 individus de grande taille impactent fortement la population par l'intermédiaire
 des interactions entre individus et de la compétition pour les ressources. La
 compétition est un des facteurs principaux dans la régulation de la dynamique
@@ -27,10 +27,10 @@ de la ressource dans la compétition par exploitation.
 L'impact de la compétition par exploitation sur la dynamique des populations a
 déjà été largement étudié, tant d'un point de vue empirique que théorique, mais
 les effets de la compétition par interférence restent quant à eux mal compris.
-Nous avons déjà montré empiriquement le rôle de l'interférence dans la
-régulation de la dynamique des populations structurées, mais à ce jour, il
-n'existe pas encore de cadre théorique aux effets de la compétition par
-interférence sur les populations structurées.
+Nous avons déjà donné des arguments empiriques quant au le rôle de
+l'interférence dans la régulation de la dynamique des populations structurées
+(Chapitre \ref{chap:sp}), mais à ce jour, il n'existe pas encore de cadre
+théorique aux effets de la compétition par interférence sur les populations structurées.
 
 Nous étudions dans ce chapitre les effets de différents niveaux de compétition
 intra-spécifique par interférence sur la dynamique d'une population structurée
@@ -45,13 +45,15 @@ collemboles \textit{Folsomia candida}.
 Notre modèle prédit une variété de dynamiques possibles suivant le niveau de
 compétition par interférence imposé. A un faible niveau d'interférence, notre
 modèle se comporte de manière similaire au modèle classique de Kooijman et Metz.
-Un niveau plus fort d'interférence agit comme une force stabilisatrice sur les
-cycles de générations causés par les juvéniles. A niveau intermédiaire, des
+Un niveau légèrement supérieur d'interférence agit comme une force
+stabilisatrice sur les cycles de générations causés par les juvéniles. A niveau intermédiaire, des
 géants émergent dans la populations et commencent à la dominer. Enfin, à un
-niveau très élevé d'interférence, un nouveau type de cycle apparaît que l'on
-appelle cycles causés par l'interférence. Nos résultats théorique permettent
-d'apporter un nouvel éclairage dans l'interprétation des dynamiques de la
-structure en taille des populations de collemboles élevées au laboratoire.
+niveau très élevé d'interférence, un nouveau type de cycles apparaît que l'on
+appelle ``cycles causés par l'interférence''. Nos résultats théoriques
+permettent d'apporter un nouvel éclairage dans l'interprétation des dynamiques de la
+structure en taille des populations de collemboles élevées au laboratoire. Les
+travaux présentés dans ce chapitre feront l'objet d'une publication présentée
+dans l'Annexe \ref{An:AmNat}.
 
 \section{Éléments de méthodologie}
 
@@ -65,39 +67,8 @@ Notre modèle repose sur celui développé par
 est un modèle mécaniste qui défini les processus au niveau individuel et laisse
 la dynamique émerger au niveau de la population. Les paramètres du
 modèle sont tirés des suivis expérimentaux des populations de collembole
-présentés dans le Chapitre précédent. Les paramètres sont rappelés dans la Table
-\ref{tab:ANparam}. Les données expérimentales permettant de justifier ces
-données sont présentées dans les Supplementary Materials \ref{subsec:SupMat1} de
-l'Annexe \ref{An:AmNat}. 
+présentés dans le Chapitre précédent. 
 
-\begin{table}
-\caption{\label{tab:ANparam}Variables et paramètres pour \textit{Folsomia
-candida}}
-\begin{tabular}{cccl}
-\hline
-\hline 
- & & &\\
- Objects and  & Default values & Units & Description\\ 
-symbols & & &\\
-\hline
-	$i$-state variable & & & \\ 
-	$l$ &   & mm & Individual length \\ 
-	Parameters & & & \\ 
-	$l_{b}$ & 0.25 & mm & Length at birth \\ 
-	$l_{j}$ & 0.6 & mm & Length at maturity \\ 
-	$l_{m}$ & 3.0 & mm & Length at infinite\\
-	& & &  resources \\ 
-	$\gamma$ & 0.015 & d$^{-1}$ & Van Bertalanffy growth rate \\ 
-	$\eta_{H}$ & 1000 & individuals & Half saturation constant \\ 
-	$\mu$ & 0.0065 & d$^{-1}$ & Background mortality \\ 
-	$r_{m}$ & 3.0 & d$^{-1}$mm$^{-2}$ & Reproduction rate \\ 
-	$\kappa$ & 0.7 & -- & Fraction of energy \\
-	  &   &   & intake allocated \\
-	  &   &   & to reproduction \\ 
-	  $I$ & 0 & -- & Level of interference\\
-\hline 
-\end{tabular} 
-\end{table}
 
 \subsubsection{Densité dépendance}
 
@@ -120,7 +91,7 @@ comme suit, avec $\eta _H$ un coefficient de demi-saturation:
 A(t,l)=1-\frac{\eta(t,l)}{\eta_H+\eta(t,l) }  
 \end{equation}
 
-La densité resentie $\eta$ est définie pour un individu de taille $l$, au temps
+La densité ressentie $\eta$ est définie pour un individu de taille $l$, au temps
 $t$, par:
 
 \begin{equation}
@@ -128,8 +99,8 @@ $t$, par:
 \eta(t,l)=\int_{l_b}^{l_m} \! C(l,\lambda)\cdot n(t,\lambda)\cdot\lambda^2\, \mathrm{d}\lambda
 \end{equation}
 
-La densité de la population resentie par un individu dépend donc de la structure
-effective de la population, et d'une fonction de compétition $C(\lambda ,l)$.
+La densité de la population ressentie par un individu dépend donc de la
+structure effective de la population, et d'une fonction de compétition $C(\lambda ,l)$.
 Cette fonction de compétition représente la supériorité d'un individu de taille
 $\lambda$ sur un individu de taille $l$ en fonction de la différence de taille
 entre les deux:
@@ -141,13 +112,11 @@ C(l,\lambda) = \mathrm{max}\left[ 0.01,\, 1+I\cdot(\lambda-l) \right]
 
 où $I$ est le paramètre d'interférence qui permet de régler le niveau de
 compétition par interférence dans la population. $I=0$ conduira à une population
-régulée uniquement par de la compétition par exploitation. 
+régulée uniquement par de la compétition par exploitation. A l'inverse, une
+valeur de $I$ très élevée indique une forte domination de l'interférence sur
+l'exploitation.
 
 \subsubsection{règle du $\kappa$ et taux individuels}
-
-Outre les interactions entre individus, le modèle se base sur les règles
-d'allocation dynamiques du budget énergétique \autocites{kooijman2000a}. Une fois la règle fixée, on peut en
-dériver les taux vitaux individuels. 
 
 \begin{figure}[!ht]
 \begin{center}
@@ -158,6 +127,10 @@ $\kappa$]{Schéma de la règle du $\kappa$ et de ses implication}
 \end{center}
 \end{figure}
 
+Outre les interactions entre individus, le modèle se base sur les règles
+d'allocation dynamique du budget énergétique \autocites{kooijman2000a}. Une fois la règle fixée, on peut en
+dériver les taux vitaux individuels. 
+
 Nous nous basons sur la règle d'allocation appelée règle du
 $\kappa$ ($\kappa$-rule), schématisée par la Figure \ref{fig:AN1}. Cette règle
 suppose qu'une proportion $\kappa$ de l'énergie acquise par un individu est
@@ -165,14 +138,18 @@ allouée à la maintenance (métabolisme) et à la croissance, le reste ($1-\kap
 étant attribué à la reproduction. Cela implique automatiquement qu'un individu à sa
 taille maximum continue de se reproduire, ce qui n'est pas toujours le cas pour
 d'autres règles d'allocation de l'énergie (voir Annexe \ref{An:AmNat},
-Supplementary Materials \ref{subsec:SupMat4}). Si l'énergie acquise n'est pas
-suffisante pour couvrir l'intégralité du métabolisme, l'individu meure. 
+Supplementary Materials \ref{subsec:SupMat4}). Lorsque l'individu ne grandit
+plus, l'énergie est alors divisé en une fraction fixe pour couvrir le
+métabolisme et le reste pour la reproduction. Si l'énergie acquise diminue, le
+métabolisme étant fixé par la taille de l'individu, la quantité
+allouée à la reproduction diminue. Si l'énergie acquise n'est pas suffisante
+pour couvrir l'intégralité du métabolisme, l'individu meure.
 
-En supposant que l'acquisition de la ressource est proportionnelle à $l^2$
+On suppose que l'acquisition de la ressource est proportionnelle à $l^2$
 et que le métabolisme est proportionnel à $l^3$, cette règle d'allocation de
-l'énergie nous permet de définir les taux vitaux individuels tels que décrit
-dans la Table \ref{tab:ANeq}. Le détail de la dérivation des équations du modèle
-est disponible dans les Supplémentary Materials \ref{subsubsec:SupMat21} de
+l'énergie nous permet alors de définir les taux vitaux individuels tels que
+décrit dans la Table \ref{tab:ANEq}. Le détail de la dérivation des équations du modèle
+est disponible dans les Supplementary Materials \ref{subsubsec:SupMat21} de
 l'Annexe \ref{An:AmNat}. 
 
 \begin{table}
@@ -210,16 +187,51 @@ Equation & Description \\
 \end{tabular} 
 \end{table}
 
-\subsubsection{Minimum vital d'accès au ressources}
+\subsubsection{Minimum vital d'accès aux ressources}
 Nous définissons le minimum vital d'accès aux ressources comme la quantité $A^*$
-telle que la croissance individuelle est nulle. Bien que dépendante de $l$,
-cette quantité:
+telle que la croissance individuelle est nulle.
+
 \begin{equation}
 \label{eq_an4}
 A^*(l) = \frac{l}{l_m}
 \end{equation}
-est analogue au $R^*$ de Tilman dans le sens où elle définit des conditions
-minimums permettant la croissance des individus. 
+Bien que dépendante de $l$,
+cette quantité est analogue au $R^*$ de Tilman dans le sens où elle définit des
+conditions minimums permettant la croissance des individus. 
+
+Les paramètres utilisés dans ce modèle sont rappelés dans la Table
+\ref{tab:ANparam}. Les données expérimentales permettant de justifier ces
+données sont présentées dans les Supplementary Materials \ref{subsec:SupMat1} de
+l'Annexe \ref{An:AmNat}. 
+
+\begin{table}
+\caption{\label{tab:ANparam}Variables et paramètres pour \textit{Folsomia
+candida}}
+\begin{tabular}{cccl}
+\hline
+\hline 
+ & & &\\
+ Objects and  & Default values & Units & Description\\ 
+symbols & & &\\
+\hline
+	$i$-state variable & & & \\ 
+	$l$ &   & mm & Individual length \\ 
+	Parameters & & & \\ 
+	$l_{b}$ & 0.25 & mm & Length at birth \\ 
+	$l_{j}$ & 0.6 & mm & Length at maturity \\ 
+	$l_{m}$ & 3.0 & mm & Length at infinite\\
+	& & &  resources \\ 
+	$\gamma$ & 0.015 & d$^{-1}$ & Van Bertalanffy growth rate \\ 
+	$\eta_{H}$ & 1000 & individuals & Half saturation constant \\ 
+	$\mu$ & 0.0065 & d$^{-1}$ & Background mortality \\ 
+	$r_{m}$ & 3.0 & d$^{-1}$mm$^{-2}$ & Reproduction rate \\ 
+	$\kappa$ & 0.7 & -- & Fraction of energy \\
+	  &   &   & intake allocated \\
+	  &   &   & to reproduction \\ 
+	  $I$ & 0 & -- & Level of interference\\
+\hline 
+\end{tabular} 
+\end{table}
 
 \subsubsection{Intégration au niveau population}
 
@@ -247,7 +259,7 @@ proprement parler, elle nous permet d'identifier les intervalles de paramètre
 correspondant à différents types de dynamiques. 
 
 Le principe de cette analyse est comme suit: (i) une première simulation est
-exécutée avec la valeur initial du paramètre dit de bifurcation (ici $I$)
+exécutée avec la valeur initiale du paramètre dit de bifurcation (ici $I$)
 jusqu'à ce que la population ait quitté le régime transitoire; (ii) l'état final
 de la population (soit sa distribution à la fin de la simulation) est utilisé
 comme état initial d'une nouvelle simulation; (iii) le paramètre d'interférence
@@ -262,8 +274,8 @@ mortalité a un fort effet sur la dynamique de ce type de modèle, cette analyse
 a été faite pour des valeurs successives de mortalité avec le paramètre $I$
 comme paramètre de bifurcation, et pour des valeurs successives d'interférence
 avec le paramètre de mortalité $\mu$ comme paramètre de bifurcation. Ainsi,
-l'ensemble de l'espace $(I,\mu)$ a été quadrié pour des valeurs de $I$ de 0 à 3
-et des valeurs de $\mu$ de 0.001 à 0.02
+l'ensemble de l'espace $(I,\mu)$ a été quadrillé pour des valeurs de $I$ de 0 à
+3 et des valeurs de $\mu$ de 0.001 à 0.02
 
 \section{Résultats}
 
@@ -342,7 +354,7 @@ tiretées représentent les projections analytique des fonctions tracées.}
     }%
 }
 
-Les Figures \ref{fig:AN3}b et c montrent le taux de croissance et l'accès au
+Les Figures \ref{fig:AN3}b et c montrent le taux de croissance et l'accès aux
 ressources pour cette dynamique. Le taux de croissance décroît
 quasi-linéairement avec la taille, de façon très similaire au modèle classique
 sans interférence. L'accès aux ressources est très légèrement croissant mais
@@ -354,7 +366,7 @@ Pour des valeurs intermédiaires de compétition par interférence, l'avantage
 que les grands individus retirent de l'interférence contrebalance la compétition
 par exploitation imposée par les juvéniles. Ceci vient contrer les mécanismes
 de déséquilibre compétitif à l'origine des cycles de génération, et tend à
-stabiliser la population (Figure \ref{fig:AN3}d-j).
+stabiliser la population (Figure \ref{fig:AN3}d-i).
 
 Pour une valeur d'interférence sous le seuil critique de $I=1.4$, la dynamique
 se stabilise autour d'une distribution étroite de la taille corporelle (Figure
@@ -388,8 +400,8 @@ diagramme structure temps (j) que les cycles dans la structure de la population
 sont très différents des cycles de génération induits par les juvéniles (a). La
 période des cycles a été multipliée par $3$ et l'amplitude est environ $7.5$
 fois supérieure. Un cycle dans la dynamique commence par un pulse de naissance
-fait fortement augmenter la taille de la population lorsqu'une cohorte d'individus
-atteint la maturité. La population est alors multi-modale avec une majorité
+qui fait fortement augmenter la taille de la population lorsqu'une cohorte
+d'individus atteint la maturité. La population est alors multi-modale avec une majorité
 de juvéniles, des adultes nouvellement matures et quelques vieux individus de
 très grande taille. Après le pulse de naissance, les individus qui viennent de
 maturer grandissent, ce qui réduit la ressource disponible pour les individus
@@ -443,8 +455,8 @@ bifurcation de la Figure \ref{fig:AN2} et les simulations de la Figure
 \end{center}
 \end{figure}
 
-Dans un premier temps, on peut distinguer deux régions distinctes sur ce
-diagramme (une région blanche et une région grisée) qui délimitent les zones où
+Dans un premier temps, on peut distinguer deux régions différentes sur ce
+diagramme (régions blanches et grises) qui délimitent les zones où
 la taille maximale atteinte est soit proche de la taille à maturité (en blanc),
 soit proche de la taille maximum possible (en gris). Il est intéressant de noter
 que la limite entre ces deux régions dépend assez peu de la mortalité basale
@@ -458,15 +470,15 @@ des valeurs plus basses de mortalité. De plus, l'augmentation du taux de
 mortalité semble également stabiliser les cycles due à l'interférence, mais pour
 des valeur très élevées ($\mu > 0.02$). 
 
-A faible mortalité mais au niveau d'interférence, la dynamique est irrégulière
+A faible mortalité mais haut niveau d'interférence, la dynamique est irrégulière
 et les résultats sont peu fiables à cause de problèmes numériques liés à
 l'intégration des équations du modèle. En revanche, pour une interférence
-intermédiare et une faible mortalité, on peut observer une situation
+intermédiaire et une faible mortalité, on peut observer une situation
 intéressante. En effet, on constate qu'il existe une petite région où des cycles
 de génération semblables à ceux dues aux juvéniles se maintiennent alors que la
 taille maximum atteinte est proche de la taille maximum possible. Mais ces
 cycles sont dégénérés et quelques individus parviennent de temps en temps à
-s'échapper du goulet de croissance et atteindre des tailles géantes. Mais ces
+s'échapper du goulet de croissance et atteindre des tailles géantes. Ces
 individus sont rares et les dynamiques irrégulières. 
 
 \section{Discussion}
@@ -522,11 +534,11 @@ population structurée.
 \item L'observation la plus évident de l'effet de l'interférence est l'émergence
 de géants dans la population. Bien que d'autres cause puissent provoquer cette
 émergence telles que le cannibalisme ou une niche spécifique pour les plus
-grands individus, combinée aux éléments suivant, c'est un indice en faveur
+grands individus, combiné aux éléments suivant, c'est un indice en faveur
 de la compétition par interférence. 
 \item La présence d'un goulet d'étranglement de la croissance est un signe fort
 de l'action d'une compétition par interférence assez intense.
-\item Ce goulet d'étranglement résulte en une distribution de la taille
+\item Ce goulet d'étranglement provoque une distribution de la taille
 fortement asymétrique en faveur des plus petits individus dans une population
 stable. 
 \item Dans une population cyclique, cela résulte en une distribution
@@ -545,15 +557,15 @@ suffisamment diminuée.
 le ratio du temps de maturation moyen par la période des cycles tel que défini
 par \textcites{murdoch2002a} permet également de faire la distinction entre les
 différents cycles. Comme expliqué en introduction de cette thèse
-(Section \ref{modelPopStru} page \pageref{modelPopStru}), une valeur du ration
-autour de $1$. Dans notre modèle, les cycles dominés par les juvéniles ont un
-ration autour de $0.8$ alors que les cycles induits par l'interférence ont un
-ration proche de $1.5$. Ainsi, des cycles de génération avec un ratio supérieur
+(Section \ref{modelPopStru} page \pageref{modelPopStru}), une valeur du ratio
+autour de $1$ correspond à des cycles de génération. Dans notre modèle, les
+cycles dominés par les juvéniles ont un ratio autour de $0.8$ alors que les cycles induits par l'interférence ont un
+ratio proche de $1.5$. Ainsi, des cycles de génération avec un ratio supérieur
 à 1 pourraient être une indication du rôle de l'interférence. Cela pourrait par
 exemple être le cas pour les saumons dans la baie de Bristol (ratio$=1.2$) ou de
 la rivière Togiak ($1.3$), la morue d'Iceland ($1.6$), le castor de Californie
-(1.6), ou l'ours noir du Yukon (1.5). Ces espèces étant territoriales, elles
-sont en effet susceptibles à la compétition intra-spécifique par interférence. 
+(1.6), ou l'ours noir du Yukon \autocites[1.5,][]{murdoch2002a}. Ces espèces
+étant territoriales, elles sont en effet susceptibles à la compétition intra-spécifique par interférence. 
 \end{enumerate*}
 
 \subsection{L'interférence dans nos populations expérimentales}
@@ -581,22 +593,22 @@ notre étude théorique pour identifier le rôle de la compétition par
 interférence. Cette analyse apporte des arguments supplémentaires pour confirmer
 le rôle de la compétition par interférence dans la dynamique des populations de
 collemboles, et confirment ainsi du même fait l'intérêt des méthodes empiriques
-employées dans l'étude précédente pour exhumer des données le rôle de
-l'interférence.
+employées dans l'étude précédente pour extraire le rôle de
+l'interférence des données.
 
 \section{En conclusion}
 
 Notre objectif était ici d'étudier les conséquences de la compétition taille
 dépendante par interférence sur la dynamique des populations, permettant ainsi
 de compléter les résultats existants sur la compétition par exploitation et le
-cannibalisme comme mécanismes intra-spécifiques de régulation. Nous avons donc
-développé un modèle simple de dynamique de populations physiologiquement
+cannibalisme comme mécanismes intra-spécifiques de régulation des populations.
+Nous avons donc développé un modèle simple de dynamique de populations physiologiquement
 structurées qui à notre avis rassemble les aspects essentiels de la compétition
 intra-spécifique par interférence. Ce modèle n'a ainsi pas pour vocation de
 prédire précisément des dynamiques de populations, bien qu'il ait été paramétré
 pour les Collemboles \textit{Folsomia candida}, mais plutôt de démontrer les
 conséquences dynamiques de la compétition par interférence. La comparaison avec
-nos données expérimentales issues des populations de collemboles montrent qu'il
+nos données expérimentales issues des populations de collemboles montre qu'il
 est possible de détecter le rôle de la compétition par interférence dans des
 populations expérimentales ou naturelles. 
 
@@ -606,6 +618,6 @@ collemboles, mais il reste encore des différences entre le modèle et les séri
 temporelles observées, et les mécanismes détaillés à l'oeuvre dans les
 populations expérimentales ne sont encore pas éclaircis. Dans le Chapitre
 suivant, nous avons mené en parallèle deux études expérimentales afin de mieux
-comprendre a façon dont les individus se répartissent l'accès à la ressource, et
-le rôle des individus de différentes tailles dans la dynamique de la structure
+comprendre la façon dont les individus se répartissent l'accès à la ressource,
+et le rôle des individus de différentes tailles dans la dynamique de la structure
 des populations.
