@@ -25,12 +25,12 @@ comportements ou les traits écologiques varient en fonction du nombre
 d'individus présents dans la population. Ces traits écologiques comprennent
 classiquement le taux de croissance de la population ainsi que les principaux
 taux démographiques de la population (naissance, mort, immigration et
-émigration), mais peuvent également se référer au taux de croissance individuel,
-au taux de fécondité, ou à d'autres taux ou comportements au niveau individuel
+émigration), mais peuvent également se référer aux taux de croissance
+individuels, aux taux de fécondité, ou à d'autres taux ou comportements au niveau individuel
 \autocites{royama1977a}.
 
-Le principe de densité dépendance, ou densité dépendance directe, impose un
-effet négatif sur les taux responsables de l'accroissement de la population, et
+Le principe de densité dépendance, ou \textbf{densité dépendance directe},
+impose un effet négatif sur les taux responsables de l'accroissement de la population, et
 un effet positif sur les taux responsable de sa décroissance (par opposition à
 la densité indirecte ou effet Allee qui a l'effet inverse). Si l'on note $N$ la
 densité d'individus dans une population, alors une augmentation de $N$
@@ -54,14 +54,14 @@ régulation des populations a été modélisé pour la première fois par
 de nombreux modèles. 
 
 Une densité dépendance positive peut également se manifester sous la forme de
-l'effet Allee \autocites{courchamp1999a}. Dans ce cas, il existe un niveau
-minimum de densité que doit avoir la population pour être viable. En dessous de
+l'effet Allee \autocites{allee1931animal,courchamp1999a}. Dans ce cas, il existe
+un niveau minimum de densité que doit avoir la population pour être viable. En dessous de
 ce minimum, la dynamique de la population tendra inexorablement vers
 l'extinction. Ce phénomène se produit par exemple lorsqu'avec le déclin de la
-population, les rencontres entre partenaires sexuels se font de plus en plus
-difficiles, et la population ne parvient plus à se reproduire en nombre
-suffisant pour se maintenir. Bien qu'étant relativement répandu, nous
-n'accorderont pas ici plus de place à ce mécanisme. Nous nous intéresserons dans
+population, les rencontres entre partenaires sexuels sont de plus en plus
+difficiles, et les individus ne parviennent plus à se reproduire en nombre
+suffisant pour permettre à la population de se maintenir. Bien qu'étant
+relativement répandu, nous n'accorderont pas ici plus de place à ce mécanisme. Nous nous intéresserons dans
 la suite uniquement à la densité dépendance négative, ou densité dépendance
 directe. 
 
@@ -71,25 +71,29 @@ Les causes directes de la densité dépendance sont en premier lieu la
 compétition, et dans certains cas la prédation (incluant le parasitisme et les
 maladies). Par définition, la compétition est densité dépendante puisqu'elle
 relie le nombre d'individu à la disponibilité d'une ressource donnée. Ainsi, la
-compétition pour un territoire, pour un refuge contre les conditions
-environnementales ou contre un prédateur, pour la nourriture, ou pour la
-possibilité de se reproduire peuvent tous être à l'origine d'une réponse densité
-dépendante des taux démographiques d'une population
+compétition pour un territoire, pour un refuge pour se protéger contre des
+conditions environnementales hostiles ou contre un prédateur, pour la
+nourriture, ou pour la possibilité de se reproduire peuvent toutes être à
+l'origine d'une réponse densité dépendante des taux démographiques d'une population
 \autocites{keddy1989a,begon2009a}.
 
 De la même façon, les prédateurs peuvent également causer de la densité
 dépendance chez les proies, notamment sur la mortalité, par différents
-mécanismes \autocites{taylor1984a} \begin{enumerate*}[label=(\roman*),
-before=\unskip{ : }, itemjoin={{ ; }}, itemjoin*={{ ; et }}] \item si la
-population de prédateur réagit suffisamment vite à la présence de proie,
-l'augmentation de la population de proie provoque l'augmentation de la mortalité
-par prédation \item la configuration spatiale de l'environnement peut être telle
+mécanismes \autocites{taylor1984a} 
+\begin{enumerate*}[label=(\roman*),
+before=\unskip{ : }, itemjoin={{ ; }}, itemjoin*={{ ; et }}] 
+\item si la
+population de prédateurs réagit suffisamment vite à la présence de proies,
+l'augmentation de la population de proies provoque l'augmentation de la
+mortalité par prédation 
+\item la configuration spatiale de l'environnement peut être telle
 que de nombreux prédateurs se retrouvent dans un même endroit si les proies y
-sont nombreuses, imposant alors une forte mortalité \item une réponse
+sont nombreuses, imposant alors une forte mortalité 
+\item une réponse
 développementale du prédateur peut entraîner une augmentation du taux de
-consommation du prédateur lorsque les proies sont plus abondantes \item une
-réponse fonctionnelle du prédateur de type III \autocites{holling1965a} cause
-une mortalité densité dépendante chez la proie lorsqu'elle est en faible
+consommation du prédateur lorsque les proies sont plus abondantes 
+\item une réponse fonctionnelle du prédateur de type III
+\autocites{holling1965a} cause une mortalité densité dépendante chez la proie lorsqu'elle est en faible
 densité.
 \end{enumerate*}
 
@@ -102,8 +106,9 @@ compétition pour les ressources.
 La compétition pour les ressources est l'une des interactions écologiques
 essentielles dans la régulation des populations et des communautés. Elle est définie comme une
 interaction entre organismes telle que les performances d'un individus en termes
-de fécondité, croissance ou survie, sont réduites par la présence d'un autre
-organisme \autocites{volterra1931a, gause1932a, park1948a, park1954a, park1957a}.
+de fécondité, croissance ou survie, sont réduites par la présence d'autres
+organismes \autocites{volterra1931a, gause1932a, park1948a, park1954a,
+park1957a}.
 La compétition peut intervenir aussi bien entre des individus d'espèces
 différentes (compétition inter-spécifique) qu'au sein d'une population
 d'individus de la même espèce (compétition intra-spécifique). 
@@ -121,21 +126,21 @@ ressource qui leur est commune \autocites{goss-custard1980a,
 vance1984a, begon2009a}. Les individus concernés n'interagissent alors pas directement les
 uns avec les autres, ils sont sensibles au niveau de ressources
 disponible après consommation par d'autres individus. Cette compétition est
-donc dite indirecte car elle ne requiert pas de contact physique entre les
-individus pour entrer en jeu. Enfin, il est indispensable que la ressource
-considérée soit limitante pour que les individus entre en compétition
-\autocites{begon2009a}. 
+donc dite indirecte car elle ne requiert pas de contact physique ou
+d'interaction directe entre les individus pour entrer en jeu. Enfin, il est
+indispensable que la ressource considérée soit limitante pour que les individus
+entrent en compétition \autocites{begon2009a}. 
 
-\subsubsection{Dans les modèles de population non structurés}
+\subsubsection{Dans les modèles de populations non structurées}
 
 En écologie des populations, la compétition par interférence a été introduite 
-dans les premiers modèles par de la fonction logistique
+dans les premiers modèles par la fonction logistique
 \autocites{verhulst1838a}, sous la forme d'une capacité de charge (classiquement notée $K$). La variation
-de la densité $N$ de la population s'écrit alors sous la forme
+de la densité de la population $N$ s'écrit alors sous la forme
 $$\frac{dN}{dt}=rN \left(1-\frac{N}{K}\right)$$ où $r$ est le taux
 d'accroissement de la population. On constate alors que le taux de croissance
-per capita de la population $\frac{dN}{dt}\cdot \frac{1}{N}$ suit alors une loi
-affine décroissante dont la pente est $-\frac{1}{K}$. En d'autres termes, le
+\textit{per capita} de la population $\frac{dN}{dt}\cdot \frac{1}{N}$ suit alors
+une loi affine décroissante dont la pente est $-\frac{1}{K}$. En d'autres termes, le
 taux de croissance de la population tend vers 0 lorsque la densité de la
 population s'approche de $K$. De plus, si la population est moins dense que $K$,
 elle va croître jusqu'à atteindre sa capacité de charge, mais à l'inverse, si
@@ -148,7 +153,7 @@ déclinaisons ou d'alternatives à ce modèle. On peut citer par exemple les
 modèles à reproduction discrète où la compétition a été intégrée sous la forme
 de la loi de Beverton Holt. Dans ces différents modèles, la compétition est
 représentée sous une forme symétrique, sans aucune différence entre les
-individus constituants de la population. 
+individus constituants la population. 
 
 \subsubsection{En dynamique des populations structurées}
 
@@ -159,18 +164,18 @@ donc pas égaux non plus face à la compétition.
 
 Si les différences entre individus sont fortement marquées, ou influent
 beaucoup sur leurs performances individuelles et écologiques, il devient alors
-important de considérer la structure de la population lorsque l'on cherche à
-décrire sa dynamique. Nous avons déjà fait référence au conséquences de la
+nécessaire de considérer la structure de la population lorsque l'on cherche à
+décrire sa dynamique. Nous avons déjà fait référence aux conséquences de la
 compétition par exploitation sur la dynamique d'une population structurée en
 taille (cf. section~\ref{modelPopStru} page~\pageref{modelPopStru}). L'étude
 des modèles physiologiquement structurés a montré que des capacités compétitives différentielles selon l'état
 physiologique de l'individu avaient un impact très fort sur la dynamique que
 suivait la population. Dans un modèle simplifié en deux stades aux capacités de
 compétition différentes, juvéniles et adultes, un avantage compétitif aux
-juvéniles entraînait des cycles de génération dit ``juvenile driven'', alors
-qu'un avantage aux adultes conduisait à des cycles ``adult driven'' aux caractéristiques
-différentes. Une compétition équilibrée se traduit par une dynamique stable de
-la population dans son ensemble. 
+juvéniles entraînait des cycles de génération dit ``\textbf{juvenile driven}'',
+alors qu'un avantage aux adultes conduisait à des cycles ``\textbf{adult
+driven}'' aux caractéristiques différentes \autocites{de-roos2003a}. Une
+compétition équilibrée se traduit par une dynamique stable de la population dans son ensemble. 
 
 
 \subsection{La compétition par interférence}
@@ -180,7 +185,7 @@ la population dans son ensemble.
 A l'opposé de la compétition par exploitation, il existe une autre forme de
 compétition appelée compétition par interférence. Cette compétition intervient
 quand les individus subissent une interaction directe négative où l'un d'eux
-réduit la compacité de l'autre à exploiter une ressource commune, quelque soit
+réduit la capacité de l'autre à exploiter une ressource commune, quel que soit
 le niveau de cette ressource \autocites{park1954a,vance1984a}. Ces interactions
 peuvent prendre différentes formes : agressivité \autocites{schoener1976a},
 territorialité \autocites{walls1990a,kennedy1996a}, allelopathie
@@ -236,13 +241,13 @@ bénéfique pour le gagnant, les deux espèces peuvent cohabiter si l'infériori
 dans la compétition par exploitation est contrebalancée par une supériorité dans
 la compétition par interférence. \end{enumerate*}
 
-La compétition par interférence peut également être considéré du point de vu
+La compétition par interférence peut également être considérée du point de vue
 intra-spécifique \autocites{walde1984a, crowley1987a, maddonni2004a,
 smallegange2006a}. Dans une étude récente, \textcite{de-villemereuil2011a} ont
 étudié différentes réponses fonctionnelles pour le consommateur, en étendant les
 réponses fonctionnelles classiques pour tenir compte des comportements
 d'interférence inter et intra-spécifiques. Dans plusieurs exemples, ils montrent
-notamment que la compétition par interférence intra-spécifique a un impact plus
+que la compétition par interférence intra-spécifique a un impact plus
 fort sur la régulation de la dynamique des populations étudiées que la compétition par
 interférence inter-spécifique. 
 
@@ -251,15 +256,15 @@ structurée}
 
 Le signe et l'intensité de la compétition par interférence dépend généralement
 des différences d'histoire de vie entre les compétiteurs (différences de force,
-de sexe, de taille corporelle,\ldots). Pour décrire précisément sa dynamique, il
-est donc nécessaire d'adopter une approche tenant compte de la structure de la
-population. Dans ce cadre, modéliser un système ressource-consommateur simple
+de sexe, de taille corporelle,\ldots). Pour décrire précisément ses effets sur
+la dynamique de la population, il est donc nécessaire d'adopter une approche
+tenant compte de la structure de la population. Dans ce cadre, modéliser un système ressource-consommateur simple
 incluant de la compétition par interférence chez le consommateur nécessite une
 approche centrée sur l'individu. Les modèles de population structurées physiologiquement (cf.
-section~\ref{modelPopStru} page~\pageref{modelPopStru}) apporte les éléments
+section~\ref{modelPopStru} page~\pageref{modelPopStru}) apportent les éléments
 nécessaire à l'étude de la compétition intra-spécifique chez une population de
-consommateur structurée en taille. En effet, ces modèles tiennent compte
-explicitement de la distribution en taille de la population et dérive la
+consommateurs structurée en taille. En effet, ces modèles tiennent compte
+explicitement de la distribution en taille de la population et dérivent la
 dynamique à l'échelle de la population des processus modélisés à l'échelle de
 l'individu, tels que la croissance, la reproduction ou la mortalité
 \autocites{kooijman1984a, metz1986a, de-roos1997a}. De plus, puisque ces modèles
@@ -271,4 +276,4 @@ Ces modèles ont déjà été
 des conséquences du développement ontogénétique sur la dynamique des populations
 et des communautés \autocites{de-roos2012a}. Ce cadre servira de base
 à l'étude théorique des conséquences de la compétition par interférence sur la
-dynamique d'une popualtion structurée. 
+dynamique d'une population structurée. 
