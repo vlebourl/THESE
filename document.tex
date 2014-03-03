@@ -29,6 +29,8 @@
 \renewcommand{\printparttitle}[1]{\parttitlefont #1\vfil\@partimage\vfil}
 \makeatother
 
+\usepackage{pdfpages}
+
 \usepackage{afterpage}
 
 \usepackage{wrapfig}
@@ -211,7 +213,6 @@ doi=false, isbn=false, url=false,sorting=ynt]{biblatex}
 \usepackage{multirow}
 \usepackage{subfig}
 \usepackage{caption}
-\usepackage{subcaption}
 \usepackage{float}
 \usepackage{subfloat}
 \usepackage{longtable}
@@ -247,7 +248,7 @@ doi=false, isbn=false, url=false,sorting=ynt]{biblatex}
 \addto{\captionsenglish}{\renewcommand{\contentsname}{Table des matières}}
 \addto{\captionsenglish}{\renewcommand{\listfigurename}{Liste des figures}}
 \addto{\captionsenglish}{\renewcommand{\listtablename}{Liste des tables}}
-\addto{\captionsenglish}{\renewcommand{\tablename}{Liste des tableaux}}
+\addto{\captionsenglish}{\renewcommand{\tablename}{Table}}
 \addto{\captionsenglish}{\renewcommand{\appendixname}{Annexe}}
 
 \usepackage{tocloft}
