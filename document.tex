@@ -17,6 +17,7 @@
 \usepackage[intlimits]{amsmath}
 \usepackage{mathtools}
 \usepackage{ amssymb }
+\usepackage{ wasysym }
 
 \usepackage[pdftex]{graphicx}
 \newlength{\lofthumbsize}
@@ -348,14 +349,16 @@ structurées : \'Etude expérimentale et théorique chez le Collembole
 %\printbibliography[title={Livres cités},type=book]
 %\printbibliography[title={Articles cit\'es},type=article]
 %\printbibliography[title={Autres citations}, nottype=article, nottype=book]
-\printbibliography[title={Bibliographie},sorting=nyt]
 
 \newpage 
 \listoftables
 \newpage 
-\lofimagetrue
+%\lofimagetrue
 \listoffigures
-\lofimagefalse
+%\lofimagefalse
+
+\newpage 
+\printbibliography[title={Bibliographie},sorting=nyt]
  
 \end{Spacing}
 
