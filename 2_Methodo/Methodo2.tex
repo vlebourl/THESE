@@ -1,7 +1,5 @@
-\chapter[Diagramme structure -- temps: remprésentation graphiques de la
-dynamique d'une population structurée][Diagramme structure -- temps]{Diagramme structure -- temps: représentation graphiques de la
-dynamique d'une population structurée}\label{Chap:STDiag}
-
+\chapter{The visual display of structured population dynamics and STdiag its implementation in R}\label{Chap:STDiag}
+\chaptermark{Structure-time diagrams}
 \vspace{4cm}
 
 \begin{Spacing}{1}
@@ -10,6 +8,7 @@ Le Bourlot, Vincent, François Mallard, Caroline Ligier, Manuel Massot,
 David Claessen, and Thomas Tully, "The visual display of structured population dynamics and STdiag its implementation in R".\\
 under review at Ecology and Evolution
 }
+Voir Chapitre \ref{chap:method} Section \ref{sec:stdiag}.
 \end{Spacing}
 
 \section*{Abstract}
@@ -611,10 +610,14 @@ Here is the code for generating the Figure \ref{fig:ASTd2}. We used the data
 data(sample)
 st1=STdiag(z~x*y,data=sample,xlab="Time",ylab="Structure",color="gray",main="Gray Palette")
 st2=STdiag(z~x*y,data=sample,xlab="Time",ylab="Structure",color="tim",main="Tim Palette")
-st3=STdiag(z~x*y,data=sample,xlab="Time",ylab="Structure",color="tim",main="Log Color Scale",log=T)
-st4=STdiag(z~x*y,data=Interpolation(sample),xlab="Time",ylab="Structure",color="tim",main="Interpolated data",log=T)
-st5=STdiag(z~x*y,data=Interpolation(sample),xlab="Time",ylab="Structure",color="tim",main="sm = 0.2",log=T,smooth=T,sm=0.2)
-st6=STdiag(z~x*y,data=Interpolation(sample),xlab="Time",ylab="Structure",color="tim",main="sm = 0.6",log=T,smooth=T,sm=0.6)
+st3=STdiag(z~x*y,data=sample,xlab="Time",ylab="Structure",color="tim",
+    main="Log Color Scale",log=T)
+st4=STdiag(z~x*y,data=Interpolation(sample),xlab="Time",ylab="Structure",
+    color="tim",main="Interpolated data",log=T)
+st5=STdiag(z~x*y,data=Interpolation(sample),xlab="Time",ylab="Structure",
+    color="tim",main="sm = 0.2",log=T,smooth=T,sm=0.2)
+st6=STdiag(z~x*y,data=Interpolation(sample),xlab="Time",ylab="Structure",
+    color="tim",main="sm = 0.6",log=T,smooth=T,sm=0.6)
 pdf(file="figSTdiag.pdf",width=7, height=16*7/9)
 print(st1) ; print(st2) ; print(st3) ; print(st4) ; print(st5) ; print(st6)
 dev.off()
