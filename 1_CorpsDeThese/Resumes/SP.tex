@@ -166,7 +166,7 @@ une structure tri-modale, exclusivement chez le clone HA. Le clone HA est donc
 capable de produire des adultes de très grande taille à la survie très longue,
 ce que TO est incapable de faire.
 
-\subsubsection{Dynamique de la structure}
+\subsubsection{Dynamique de la structure}\label{sec:shortterm}
 
 Dans un second temps, on s'intéresse aux événements dynamiques rapides
 à l'échelle des séries temporelles. En effet, même si la structure peut être
@@ -356,19 +356,60 @@ dans le plan des deux premières composantes.
 En utilisant l'algorithme des ``k-means'', nous avons regroupé les structures
 qui partageaient des caractéristiques communes en quatre groupes. En traçant ces
 structures ensemble, nous avons pu déterminer quatre grandes structures typiques
-de populations expérimentales (Figure \ref{fig:SP3a}): (i) une
-structure avec beaucoup de juvéniles et des adultes de petite taille (type $1$);
-(ii) une structure avec des adultes de taille intermédiaire (type $2$); (iii)
-une structure avec moins de juvéniles et des adultes de grande taille (type
-$3$); et (iv) une structure trimodale avec des juvéniles, des petits et des
-grands adultes (type $4$).
+de populations expérimentales (Figure \ref{fig:SP3a}): (i) une structure avec
+beaucoup de juvéniles et des adultes de petite taille (type $1$); (ii) une
+structure avec des adultes de taille intermédiaire (type $2$); (iii) une
+structure avec moins de juvéniles et des adultes de grande taille (type $3$); et
+(iv) une structure trimodale avec des juvéniles, des petits et des grands
+adultes (type $4$). Les caractéristiques principales des différents types de
+structure en terme de nombre d'individus et de tailles moyennes des différents
+groupes d'individus sont données dans la Table \ref{tab:SP2}.
+
+\begin{table}[!ht]
+\centering
+\footnotesize
+\caption{Caractéristiques des structures types (nombre moyen d'individus, taille
+moyenne en mm et écarts types) }\label{tab:SP2}
+\begin{tabular}{rrrrr}
+  \hline
+Structure  & Abondance & Nombre & Nombre & Nombre\\
+type & totale & de petits & de grands & de \\
+  &  & individus & individus & modes \\
+  \hline
+  1 & 1286 (sd 662)& 1268 (sd 661)& 18 (sd 10)& 2\\ 
+  2 & 202 (sd 148)& 184 (sd 148)& 18 sd(8)& 2\\ 
+  3 & 122 (sd 66)& 68 (sd 57)& 54 (sd 22)& 2\\ 
+  4 & 490 (sd (291)& 430 (sd 298)& 60 (sd 22)& 3\\ 
+   \hline
+\end{tabular}
+\\[12pt]
+\begin{tabular}{rrrrrrr}
+  \hline
+Structure  & Densité & Densité
+& Densité & Taille & Taille & Taille \\
+type & dans le & dans le & dans le & du & du & du \\
+  & 1er mode &
+ 2e mode & 3e mode & 1er mode & 2e mode & 3e mode \\
+  \hline
+1 & 1113 (sd 648)& 185 (sd 56)& - & 0.37 (sd 0.1) & 1.32 (sd 0.3) & - \\ 
+  2 & 145 (sd 143)& 59 (sd 23)& - & 0.42 (sd 0.14) & 1.56 (sd 0.27) & - \\ 
+  3 & 40 (sd 51) & 84 (sd 40)& - & 0.39 (sd 0.14)& 1.80 (sd 0.34) & - \\ 
+  4 & 340 (sd 295)& 106 (sd 41)& 60 (sd 22)& 0.38 (sd 0.09) & 1.32 (sd 0.29) & 2.02
+  (sd 0.23)\\
+   \hline
+\end{tabular}
+
+\end{table}
 
 \begin{figure}[!ht]
 \begin{center}
 \includegraphics[width=0.95\textwidth]{1_CorpsDeThese/Resumes/Fig/SP02c}
 \caption[\lofimage{1_CorpsDeThese/Resumes/Fig/SP02b}Quatres grands
 types de structures]{Structures caractéristiques des quatre grands types de
-structure identifiés.}
+structure identifiés. Les distributions ont été groupées selon les résultats du
+groupement non hiérarchique en randomisant les positions pour faire abstraction
+de l'autocorrélation temporelle et faire ressortir les caractéristiques
+communes.}
 \label{fig:SP3a}
 \end{center}
 \end{figure}
@@ -395,7 +436,8 @@ plan des deux premières composantes.}
 Cette représentation permet une classification objective de la structure d'une
 population à un temps donné dans un des quatre types de structure. Cela permet
 aussi d'observer la trajectoire temporelle dans le plan des deux premières
-composantes de l'ACP et donc sa dynamique entre les différentes structures caractéristiques. 
+composantes de l'ACP et donc sa dynamique entre les différentes structures
+caractéristiques.
 
 \subsubsection{Trajectoires dans le plan des composantes}
 

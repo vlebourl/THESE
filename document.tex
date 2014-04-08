@@ -287,10 +287,11 @@ doi=false, isbn=false, url=false,sorting=ynt]{biblatex}
 %\newgeometry{left=1in,right=1.5in,top=1.2in,bottom=1.2in}
 
 % table des matieres generale
-\begin{Spacing}{1}
 
-%\newpage
-%\input{merci.tex}
+% \newpage
+% \input{merci.tex}
+% \newpage
+% ~
 \newpage
 \input{abstract.tex}
 
@@ -298,6 +299,7 @@ doi=false, isbn=false, url=false,sorting=ynt]{biblatex}
 
 %\setlength{\parskip}{0.0pt plus 1.0pt}
 \newpage
+\begin{Spacing}{1}
 \tableofcontents
 
 \end{Spacing}
@@ -364,6 +366,9 @@ structurées : \'Etude expérimentale et théorique chez le Collembole
 \printbibliography[title={Bibliographie},sorting=nyt]
  
 \end{Spacing}
+\newpage
+\thispagestyle{empty}
+\includepdf{4couv}
 
 \end{document}
 
